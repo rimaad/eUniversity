@@ -9,7 +9,7 @@
 import UIKit
 
 struct Value : Decodable {
-   let value : [User]
+   let value : User
 }
 
 struct User : Decodable {
@@ -17,15 +17,6 @@ struct User : Decodable {
     let  FirstName : String
     let InstitutionName : String
     let AuthToken : String
-    
-  /*  init(json:[String:Any]) {
-       
-        
-        PersonId = json["PersonID"] as? Int ?? -1
-        FirstName = json["FirstName"] as? String ?? ""
-        InstitutionName = json["InstitutionName"] as? String ?? ""
-        AuthToken = json["AuthToken"] as? String ?? ""
-    } */
 }
 
 

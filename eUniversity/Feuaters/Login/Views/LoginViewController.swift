@@ -26,22 +26,24 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        let apiCient = ApiClient()
-
-        apiCient.login(userName: usernameTextField.text ?? "", password: passwordTextField.text ?? "") { (response) in
-            
+        if let username = usernameTextField.text, let password = passwordTextField.text {
+            UserController.sharedController.delegate = self
+            UserController.sharedController.login(userName: username, password: password)
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension LoginViewController:UserControllerDelegate {
+    
+    func onSuccess() {
+        print("Success")
+        let storyBoard = UIStoryboard(name:"Main", bundle:nil)
+        let filterVC = storyBoard.instantiateViewController(withIdentifier: "tabBar")
+        self.present(filterVC, animated: true, completion: nil)
     }
-    */
+    
+    func onError() {
+}
 
 }
+

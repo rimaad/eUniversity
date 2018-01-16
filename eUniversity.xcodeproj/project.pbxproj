@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2624F4A7200D40F300CE1DCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4A6200D40F300CE1DCF /* User.swift */; };
+		2624F4AA200E797100CE1DCF /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4A9200E797100CE1DCF /* UserController.swift */; };
 		2628AE671FE9AE5200A6C37A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628AE661FE9AE5200A6C37A /* StringExtension.swift */; };
 		2628AE6A1FEEA58000A6C37A /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628AE691FEEA58000A6C37A /* Language.swift */; };
 		2628AE821FEEE0D200A6C37A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2628AE801FEEE0D100A6C37A /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		11108D70E1E66F0C9012917E /* Pods-eUniversityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversityUITests/Pods-eUniversityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		22F99827BFB20DB6414004B9 /* Pods_eUniversityUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eUniversityUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2624F4A6200D40F300CE1DCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2624F4A9200E797100CE1DCF /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		2628AE661FE9AE5200A6C37A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2628AE691FEEA58000A6C37A /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		2628AE7F1FEEDFA700A6C37A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Language.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2624F4A8200E795500CE1DCF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2624F4A9200E797100CE1DCF /* UserController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2624F4AB200E944400CE1DCF /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		2628AE651FE9AE3400A6C37A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +200,8 @@
 		26689EA41FD88D750081FA12 /* eUniversity */ = {
 			isa = PBXGroup;
 			children = (
+				2624F4AB200E944400CE1DCF /* Coordinators */,
+				2624F4A8200E795500CE1DCF /* Controllers */,
 				265E33D22007D5540033B393 /* Services */,
 				265E33CA20068A890033B393 /* GoogleService-Info.plist */,
 				265E33C92006835E0033B393 /* eUniversity.entitlements */,
@@ -575,6 +594,7 @@
 			files = (
 				265E33D12007C7740033B393 /* LoginViewController.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
+				2624F4AA200E797100CE1DCF /* UserController.swift in Sources */,
 				26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */,
 				265E33D42007D5720033B393 /* ApiClient.swift in Sources */,
 				2628AE671FE9AE5200A6C37A /* StringExtension.swift in Sources */,

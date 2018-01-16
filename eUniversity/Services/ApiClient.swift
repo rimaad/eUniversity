@@ -15,7 +15,7 @@ let baseUrl = "http://api.euniversity.ba/api"
 class ApiClient {
     
 
-    func login(userName:String,password:String,onResponse:@escaping (_ error:NSError?)->Void) {
+    func login(userName:String,password:String,onResponse:@escaping (_ success:User?, _ error:NSError?)->Void) {
         let deviceToken = UserDefaults.standard.object(forKey: "fcmToken")
         let urlString = "http://api.euniversity.ba/api/students/authentication/login"
         guard let url = URL(string:urlString) else {return}
@@ -31,7 +31,7 @@ class ApiClient {
             "Content-Type" : "application/json; charset=utf-8"
         ]
         
-        Alamofire.request(url, method: .get, parameters: parameters, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers:headers).responseJSON { (response) in
             print(response)
             if let status = response.response?.statusCode {
                 switch(status){
@@ -39,34 +39,20 @@ class ApiClient {
                     var jsonData = Data()
                     guard let responseData  = response.data  else {
                         return }
-                    
                    
-                        do {
-                            let json = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String:Any]
-                           
-                        } catch {
-                            print("Something went wrong")
-                        }
-            
-                    
-                   
-                    
                     do {
-                      
                         let user = try JSONDecoder().decode(Value.self, from: responseData)
-                        print(user.value)
+                       UserController.sharedController.userName = user.value.FirstName
+                       UserController.sharedController.accessToken = user.value.AuthToken
+                       onResponse(user.value,nil)
                     }
                     catch let jsnError{
                         print("jsonError",jsnError)
                     }
                 default:
                     print("error with response status: \(status)")
+                    onResponse(nil,nil)
                 }
-            }
-            //to get JSON return value
-            if let result = response.result.value {
-                let JSON = result as! NSDictionary
-                print(JSON)
             }
         }
     }
