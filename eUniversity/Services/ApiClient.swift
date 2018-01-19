@@ -57,14 +57,18 @@ class ApiClient {
         }
     }
     
-    func getAnnouncements() {
+    func getNews(onResponse:@escaping (_ success:User?, _ error:NSError?)->Void) {
         
-        let deviceToken = UserDefaults.standard.object(forKey: "fcmToken")
+        
         let urlString = "http://api.euniversity.ba/api/students/announcements/get"
         let url = URL(string:urlString)
         
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
         let headers = [
-            "authToken":""
+            "authToken":"\(accessToken)"
         ]
         
         let header = [
@@ -72,7 +76,26 @@ class ApiClient {
         ]
         
         Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
-            print(response)
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    var jsonData = Data()
+                    guard let responseData  = response.data  else {
+                        return }
+                    
+                    do {
+                       // let news = try JSONDecoder().decode(Value.self, from: responseData)
+                        
+                        onResponse(nil,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
            
         }
         
