@@ -82,10 +82,10 @@ class ApiClient {
                     var jsonData = Data()
                     guard let responseData  = response.data  else {
                         return }
-                    
+                    print(response.value)
                     do {
-                       // let news = try JSONDecoder().decode(Value.self, from: responseData)
-                        
+                        let news = try JSONDecoder().decode(ValueNews.self, from: responseData)
+                        print(news)
                         onResponse(nil,nil)
                     }
                     catch let jsnError{

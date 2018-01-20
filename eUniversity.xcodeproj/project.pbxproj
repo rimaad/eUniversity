@@ -15,6 +15,7 @@
 		2628AE671FE9AE5200A6C37A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628AE661FE9AE5200A6C37A /* StringExtension.swift */; };
 		2628AE6A1FEEA58000A6C37A /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628AE691FEEA58000A6C37A /* Language.swift */; };
 		2628AE821FEEE0D200A6C37A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2628AE801FEEE0D100A6C37A /* Main.storyboard */; };
+		2640776F2012363A000D6073 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640776E2012363A000D6073 /* News.swift */; };
 		265E33CB20068A890033B393 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265E33CA20068A890033B393 /* GoogleService-Info.plist */; };
 		265E33CE2007C6B70033B393 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265E33CD2007C6B70033B393 /* Login.storyboard */; };
 		265E33D12007C7740033B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265E33D02007C7740033B393 /* LoginViewController.swift */; };
@@ -66,6 +67,7 @@
 		2628AE691FEEA58000A6C37A /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		2628AE7F1FEEDFA700A6C37A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Language.storyboard; sourceTree = "<group>"; };
 		2628AE831FEEE0E200A6C37A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2640776E2012363A000D6073 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		265E33C92006835E0033B393 /* eUniversity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eUniversity.entitlements; sourceTree = "<group>"; };
 		265E33CA20068A890033B393 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		265E33CD2007C6B70033B393 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				2628AE691FEEA58000A6C37A /* Language.swift */,
 				2624F4A6200D40F300CE1DCF /* User.swift */,
+				2640776E2012363A000D6073 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				265E33D12007C7740033B393 /* LoginViewController.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
+				2640776F2012363A000D6073 /* News.swift in Sources */,
 				2624F4AA200E797100CE1DCF /* UserController.swift in Sources */,
 				26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */,
 				2624F4AF200FEA5700CE1DCF /* NewsViewController.swift in Sources */,
