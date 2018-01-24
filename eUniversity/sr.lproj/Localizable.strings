@@ -1,3 +1,10 @@
 "welcome_lbl" = "Dobro došli";
 "subtitle_lbl" = "Izaberite jezik aplikacije";
 "empty_lbl" = "Nema novih vesti !!!";
+"FirstNameLastName" = "Ime i  prezime";
+"email" = "Email :";
+"EnrollmentYear" = "Generacija :";
+"Department" = "Odsjek :";
+"Curriculum" = "Smjer :";
+"StudyYear" = "Godina studija /Semestar";
+"StudentStatus" = "Status studenta";

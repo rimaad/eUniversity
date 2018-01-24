@@ -13,6 +13,13 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsDateLabel: UILabel!
     @IBOutlet weak var newsTextLabel: UILabel!
     @IBOutlet weak var newsTitleLabel: UILabel!
+    
+    func populateCell(news:News) {
+        newsTitleLabel.text = news.Title
+        newsTextLabel.text = news.Text
+        newsDateLabel.text = news.Date
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +30,4 @@ class NewsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

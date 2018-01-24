@@ -27,16 +27,11 @@ class ApiClient {
             "Content-Type" :"application/json"
         ]
         
-        let header = [
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
-        
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers:headers).responseJSON { (response) in
             print(response)
             if let status = response.response?.statusCode {
                 switch(status){
                 case 200:
-                    var jsonData = Data()
                     guard let responseData  = response.data  else {
                         return }
                    
@@ -57,7 +52,7 @@ class ApiClient {
         }
     }
     
-    func getNews(onResponse:@escaping (_ success:User?, _ error:NSError?)->Void) {
+    func getNews(onResponse:@escaping (_ success:Announcements?, _ error:NSError?)->Void) {
         
         
         let urlString = "http://api.euniversity.ba/api/students/announcements/get"
@@ -70,23 +65,18 @@ class ApiClient {
         let headers = [
             "authToken":"\(accessToken)"
         ]
-        
-        let header = [
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
-        
+      
         Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
             if let status = response.response?.statusCode {
                 switch(status){
                 case 200:
-                    var jsonData = Data()
+
                     guard let responseData  = response.data  else {
                         return }
-                    print(response.value)
                     do {
-                        let news = try JSONDecoder().decode(ValueNews.self, from: responseData)
-                        print(news)
-                        onResponse(nil,nil)
+                        let announcments = try JSONDecoder().decode(ValueNews.self, from: responseData)
+                        print(announcments)
+                        onResponse(announcments.value,nil)
                     }
                     catch let jsnError{
                         print("jsonError",jsnError)
@@ -100,4 +90,43 @@ class ApiClient {
         }
         
     }
+    
+    func getStudentStatus(onResponse:@escaping (_ success:StudentData?, _ error:NSError?)->Void) {
+        
+        
+        let urlString = baseUrl + "/students/statusinformation/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let studentData = try JSONDecoder().decode(ValueStudentData.self, from: responseData)
+                        print(studentData)
+                        onResponse(studentData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+    }
+    
 }

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         NewsController.sharedController.delegate = self
@@ -23,6 +24,31 @@ class NewsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let countNum =  NewsController.sharedController.announcments?.Announcements.count {
+            return countNum
+        }
+        return  0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellReuseIdentifier = "newsCell"
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? NewsTableViewCell
+        if let countNum =  NewsController.sharedController.announcments?.Announcements.count {
+            if countNum > 0 {
+                
+                cell?.populateCell(news: (NewsController.sharedController.announcments?.Announcements[indexPath.row])!)
+            }
+
+        }
+        
+        return cell!
+
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 115
+    }
 
     /*
     // MARK: - Navigation
@@ -37,8 +63,9 @@ class NewsViewController: UIViewController {
 }
 
 extension NewsViewController : NewsControllerDelegate {
-    func onSuccess() {
-        print("Success")
+     func onSuccess(response: Announcements) {
+        print(response)
+        self.tableView .reloadData()
     }
     
     func onError() {

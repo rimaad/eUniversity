@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NewsControllerDelegate: class {
-    func onSuccess()
+    func onSuccess(response:Announcements)
     func onError()
 }
 
@@ -17,12 +17,14 @@ class NewsController: NSObject {
 
     weak var delegate : NewsControllerDelegate?
     static let sharedController = NewsController()
+    var announcments : Announcements?
     let apiClient = ApiClient()
     
     func getNews() {
         apiClient.getNews(){ (response, error) in
             if response != nil  {
-                self.delegate?.onSuccess()
+                self.announcments = response
+                self.delegate?.onSuccess(response:response!)
             } else if error != nil {
                 self.delegate?.onError()
             }

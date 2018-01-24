@@ -1,3 +1,11 @@
 "welcome_lbl" = "Welcome";
 "subtitle_lbl" = "Please choose language of the app";
 //"empty_lbl" = "No data";
+"IndexNumber" = "Index number :";
+"FirstNameLastName" = "Full name :";
+"email" = "Email :";
+"EnrollmentYear" = "Enrollment year :";
+"Department" = "Department :";
+"Curriculum" = "Curriculum :";
+"StudyYear" = "Study Year /Semestar";
+"StudentStatus" = "Student status";
