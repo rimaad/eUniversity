@@ -857,7 +857,7 @@
 				CODE_SIGN_ENTITLEMENTS = eUniversity/eUniversity.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CJ46N4ZVC7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = eUniversity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -877,7 +877,7 @@
 				CODE_SIGN_ENTITLEMENTS = eUniversity/eUniversity.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CJ46N4ZVC7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = eUniversity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

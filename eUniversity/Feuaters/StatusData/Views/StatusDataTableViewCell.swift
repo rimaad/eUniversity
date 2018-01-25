@@ -54,7 +54,7 @@ class StatusDataTableViewCell: UITableViewCell {
            statusDataSubtitle.text = StudentDataController.sharedController.studentData?.Curriculum
         case 8:
             statusDataLabel.text = "StudyYear".localized()
-            statusDataSubtitle.text = String(describing: StudentDataController.sharedController.studentData?.StudyYear)
+            statusDataSubtitle.text = String(describing:(StudentDataController.sharedController.studentData?.StudyYear ?? 0))
    
         default:
             break

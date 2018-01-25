@@ -39,11 +39,20 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return  9
+        
+        switch (section) {
+        case 0:
+            return 9
+        case 1:
+            return StudentDataController.sharedController.studentData?.StudyYear ?? 0
+        default:
+            return 0
+        }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
 }
