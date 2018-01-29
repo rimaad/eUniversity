@@ -39,6 +39,7 @@ class ApiClient {
                         let user = try JSONDecoder().decode(Value.self, from: responseData)
                        UserController.sharedController.userName = user.value.FirstName
                        UserController.sharedController.accessToken = user.value.AuthToken
+                       UserController.sharedController.StudentID = user.value.StudentID
                        onResponse(user.value,nil)
                     }
                     catch let jsnError{
@@ -129,4 +130,71 @@ class ApiClient {
         }
     }
     
+    func getAnnouncmentsImages(announcmentId:String,onResponse:@escaping (_ success:Image?, _ error:NSError?)->Void) {
+        let urlString = baseUrl + "/students/announcementphotos/GetByAnnouncementId/?announcementId=\(announcmentId)"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let imageData = try JSONDecoder().decode(ValueImage.self, from: responseData)
+                        onResponse(imageData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+        }
+    }
+    
+    func getGrades(onResponse:@escaping (_ success:StudentGrades?, _ error:NSError?)->Void) {
+        let urlString = baseUrl + "/students/studentgrades/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let gradesData = try JSONDecoder().decode(GradesValue.self, from: responseData)
+                        onResponse(gradesData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+        }
+    }
 }

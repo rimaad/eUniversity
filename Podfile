@@ -9,6 +9,7 @@ target 'eUniversity' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Alamofire', '~> 4.5'
+  pod 'SVProgressHUD'
 
   target 'eUniversityTests' do
     inherit! :search_paths

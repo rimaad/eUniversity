@@ -14,9 +14,10 @@ struct Value : Decodable {
 
 struct User : Decodable {
     let PersonID : Int
-    let  FirstName : String
+    let FirstName : String
     let InstitutionName : String
     let AuthToken : String
+    let StudentID : Int
 }
 
 

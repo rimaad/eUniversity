@@ -17,7 +17,7 @@ class StudentDataController: NSObject {
     
     weak var delegate : StudentDataControllerDelegate?
     static let sharedController = StudentDataController()
-     var studentData : StudentData?
+    var studentData : StudentData?
     let apiClient = ApiClient()
     
     func getStudentData() {

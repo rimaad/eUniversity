@@ -14,10 +14,13 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsTextLabel: UILabel!
     @IBOutlet weak var newsTitleLabel: UILabel!
     
+    
     func populateCell(news:News) {
         newsTitleLabel.text = news.Title
         newsTextLabel.text = news.Text
         newsDateLabel.text = news.Date
+        ImagesController.sharedController.getAnnouncmentsImages(announcmentID: String(news.AnnouncementID))
+        
     }
     
     override func awakeFromNib() {

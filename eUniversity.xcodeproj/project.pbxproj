@@ -31,9 +31,16 @@
 		26689EB21FD88D750081FA12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26689EB01FD88D750081FA12 /* LaunchScreen.storyboard */; };
 		26689EBD1FD88D750081FA12 /* eUniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26689EBC1FD88D750081FA12 /* eUniversityTests.swift */; };
 		26689EC81FD88D750081FA12 /* eUniversityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26689EC71FD88D750081FA12 /* eUniversityUITests.swift */; };
+		26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26770274201A6DD6006D0590 /* StudentDataTableViewCell.swift */; };
+		269598ED201D3DB6006641EB /* GradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598EC201D3DB6006641EB /* GradesViewController.swift */; };
+		269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598EE201D3DD0006641EB /* GradesTableViewCell.swift */; };
+		269598F1201D4059006641EB /* GradesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F0201D4059006641EB /* GradesController.swift */; };
+		269598F3201D406D006641EB /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F2201D406D006641EB /* Grades.swift */; };
 		26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E41DC21FE707DA00FD4A7C /* ChooseLanguageViewController.swift */; };
 		26E41DC41FE8640C00FD4A7C /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E41DC61FE8640C00FD4A7C /* Language.storyboard */; };
 		26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E41DD21FE865E300FD4A7C /* Localizable.strings */; };
+		26ED3A62201D2A8700836EEC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED3A61201D2A8700836EEC /* Image.swift */; };
+		26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED3A63201D2AA600836EEC /* ImagesController.swift */; };
 		A20822CE0E049EE8CFD0498E /* Pods_eUniversityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F99827BFB20DB6414004B9 /* Pods_eUniversityUITests.framework */; };
 		A6AB4F1CAA7E86277184ED31 /* Pods_eUniversity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10893E723E906EA3C4C344F5 /* Pods_eUniversity.framework */; };
 		D02D41A30B3E5680CB1BE3D1 /* Pods_eUniversityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD851E217F10AD32AA81F3 /* Pods_eUniversityTests.framework */; };
@@ -98,8 +105,15 @@
 		26689EC31FD88D750081FA12 /* eUniversityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eUniversityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26689EC71FD88D750081FA12 /* eUniversityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUniversityUITests.swift; sourceTree = "<group>"; };
 		26689EC91FD88D750081FA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26770274201A6DD6006D0590 /* StudentDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataTableViewCell.swift; sourceTree = "<group>"; };
+		269598EC201D3DB6006641EB /* GradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesViewController.swift; sourceTree = "<group>"; };
+		269598EE201D3DD0006641EB /* GradesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesTableViewCell.swift; sourceTree = "<group>"; };
+		269598F0201D4059006641EB /* GradesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesController.swift; sourceTree = "<group>"; };
+		269598F2201D406D006641EB /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
 		26E41DC21FE707DA00FD4A7C /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
 		26E41DD31FE865F100FD4A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26ED3A61201D2A8700836EEC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		26ED3A63201D2AA600836EEC /* ImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
 		61C53F7507E8CC0120073DCA /* Pods-eUniversityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversityUITests/Pods-eUniversityUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		930AAE30CC9426BA0F49D8F8 /* Pods-eUniversity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversity.release.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversity/Pods-eUniversity.release.xcconfig"; sourceTree = "<group>"; };
 		93CC7B22573B8E9DE472A726 /* Pods-eUniversity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversity/Pods-eUniversity.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +154,8 @@
 				2624F4A9200E797100CE1DCF /* UserController.swift */,
 				2624F4B2200FEF4A00CE1DCF /* NewsController.swift */,
 				262A29C32014BF78004C0F7F /* StudentDataController.swift */,
+				26ED3A63201D2AA600836EEC /* ImagesController.swift */,
+				269598F0201D4059006641EB /* GradesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +199,8 @@
 				2624F4A6200D40F300CE1DCF /* User.swift */,
 				2640776E2012363A000D6073 /* News.swift */,
 				262A29C82014C921004C0F7F /* StudentData.swift */,
+				26ED3A61201D2A8700836EEC /* Image.swift */,
+				269598F2201D406D006641EB /* Grades.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +218,7 @@
 			children = (
 				262A29BF2013E8B8004C0F7F /* StatusDataViewController.swift */,
 				262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */,
+				26770274201A6DD6006D0590 /* StudentDataTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,9 +310,27 @@
 			path = eUniversityUITests;
 			sourceTree = "<group>";
 		};
+		269598EA201D3D98006641EB /* Grades */ = {
+			isa = PBXGroup;
+			children = (
+				269598EB201D3DA0006641EB /* Views */,
+			);
+			path = Grades;
+			sourceTree = "<group>";
+		};
+		269598EB201D3DA0006641EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				269598EC201D3DB6006641EB /* GradesViewController.swift */,
+				269598EE201D3DD0006641EB /* GradesTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		26E41DC01FE707A000FD4A7C /* Feuaters */ = {
 			isa = PBXGroup;
 			children = (
+				269598EA201D3D98006641EB /* Grades */,
 				262A29BE2013E886004C0F7F /* StatusData */,
 				2624F4AC200FE8EC00CE1DCF /* News */,
 				265E33CC2007C69C0033B393 /* Login */,
@@ -545,6 +582,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -553,6 +591,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,15 +687,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269598F3201D406D006641EB /* Grades.swift in Sources */,
 				2624F4B3200FEF4A00CE1DCF /* NewsController.swift in Sources */,
 				265E33D12007C7740033B393 /* LoginViewController.swift in Sources */,
+				269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */,
 				262A29C42014BF78004C0F7F /* StudentDataController.swift in Sources */,
 				262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
+				26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */,
 				2640776F2012363A000D6073 /* News.swift in Sources */,
 				262A29C02013E8B8004C0F7F /* StatusDataViewController.swift in Sources */,
 				2624F4AA200E797100CE1DCF /* UserController.swift in Sources */,
+				269598F1201D4059006641EB /* GradesController.swift in Sources */,
+				269598ED201D3DB6006641EB /* GradesViewController.swift in Sources */,
+				26ED3A62201D2A8700836EEC /* Image.swift in Sources */,
 				26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */,
 				2624F4AF200FEA5700CE1DCF /* NewsViewController.swift in Sources */,
 				265E33D42007D5720033B393 /* ApiClient.swift in Sources */,
@@ -665,6 +710,7 @@
 				2628AE6A1FEEA58000A6C37A /* Language.swift in Sources */,
 				26689EA61FD88D750081FA12 /* AppDelegate.swift in Sources */,
 				26689EA81FD88D750081FA12 /* FirstViewController.swift in Sources */,
+				26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */,
 				262A29C92014C921004C0F7F /* StudentData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -857,7 +903,7 @@
 				CODE_SIGN_ENTITLEMENTS = eUniversity/eUniversity.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CJ46N4ZVC7;
 				INFOPLIST_FILE = eUniversity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -877,7 +923,7 @@
 				CODE_SIGN_ENTITLEMENTS = eUniversity/eUniversity.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CJ46N4ZVC7;
 				INFOPLIST_FILE = eUniversity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

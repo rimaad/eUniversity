@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
+        SVProgressHUD.show()
         if let username = usernameTextField.text, let password = passwordTextField.text {
             UserController.sharedController.delegate = self
             UserController.sharedController.login(userName: username, password: password)
@@ -36,13 +38,14 @@ class LoginViewController: UIViewController {
 extension LoginViewController:UserControllerDelegate {
     
     func onSuccess() {
-        print("Success")
+        SVProgressHUD.dismiss()
         let storyBoard = UIStoryboard(name:"Main", bundle:nil)
         let filterVC = storyBoard.instantiateViewController(withIdentifier: "tabBar")
         self.present(filterVC, animated: true, completion: nil)
     }
     
     func onError() {
+        SVProgressHUD.dismiss()
 }
 
 }

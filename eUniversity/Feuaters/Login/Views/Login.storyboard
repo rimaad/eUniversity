@@ -35,20 +35,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaL-FC-Dlv">
-                                <rect key="frame" x="70" y="167" width="235" height="30"/>
+                                <rect key="frame" x="70" y="224" width="235" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-kc-qld">
-                                <rect key="frame" x="70" y="243" width="235" height="30"/>
+                                <rect key="frame" x="70" y="300" width="235" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsM-Zk-CPB">
-                                <rect key="frame" x="94" y="337" width="187" height="50"/>
-                                <color key="backgroundColor" red="0.26901188980674995" green="0.41590139443351459" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="94" y="394" width="187" height="50"/>
+                                <color key="backgroundColor" red="0.20005846020000001" green="0.4775326848" blue="0.71844452619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UXq-3Q-tZm"/>
                                 </constraints>
@@ -59,18 +59,25 @@
                                     <action selector="loginPressed:" destination="IDw-kE-pps" eventType="touchUpInside" id="MZv-tu-VF3"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Hc-1d-0EC">
+                                <rect key="frame" x="55" y="91" width="265" height="95"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92538958787918091" green="0.92554813623428345" blue="0.92537957429885864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Erl-kc-qld" firstAttribute="top" secondItem="uaL-FC-Dlv" secondAttribute="bottom" constant="46" id="94d-vD-JN5"/>
                             <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="lsM-Zk-CPB" secondAttribute="trailing" constant="94" id="Dnl-Qb-Lig"/>
                             <constraint firstItem="Erl-kc-qld" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="70" id="Mpx-sk-o0f"/>
                             <constraint firstItem="lsM-Zk-CPB" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="94" id="YLM-uP-mkL"/>
                             <constraint firstItem="lsM-Zk-CPB" firstAttribute="top" secondItem="Erl-kc-qld" secondAttribute="bottom" constant="64" id="du8-nq-lhK"/>
+                            <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="2Hc-1d-0EC" secondAttribute="trailing" constant="55" id="eS4-Xb-yeu"/>
                             <constraint firstItem="uaL-FC-Dlv" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="70" id="eWX-mg-Kft"/>
-                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="jzY-UU-62Y" secondAttribute="top" constant="103" id="oNc-iO-Jq3"/>
+                            <constraint firstItem="2Hc-1d-0EC" firstAttribute="top" secondItem="jzY-UU-62Y" secondAttribute="top" constant="27" id="iW0-4t-HCT"/>
+                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="2Hc-1d-0EC" secondAttribute="bottom" constant="38" id="lfK-6c-dMj"/>
+                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="jzY-UU-62Y" secondAttribute="top" constant="160" id="oNc-iO-Jq3"/>
                             <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="uaL-FC-Dlv" secondAttribute="trailing" constant="70" id="osf-8f-OBJ"/>
                             <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="Erl-kc-qld" secondAttribute="trailing" constant="70" id="uMi-IX-Szd"/>
+                            <constraint firstItem="2Hc-1d-0EC" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="55" id="yko-dF-xcc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jzY-UU-62Y"/>
                     </view>
@@ -83,7 +90,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne9-WV-uQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="-36"/>
+            <point key="canvasLocation" x="616.79999999999995" y="-36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="340" height="60"/>
+    </resources>
 </document>

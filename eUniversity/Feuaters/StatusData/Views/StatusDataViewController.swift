@@ -30,12 +30,22 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
         let cellReuseIdentifier = "statusData"
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? StatusDataTableViewCell
         if (StudentDataController.sharedController.studentData != nil) {
             cell?.populateCell(cellIndex: indexPath.row)
         }
         return cell!
+        } else  {
+            let cellReuseIdentifier = "studentData"
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? StudentDataTableViewCell
+            if (StudentDataController.sharedController.studentData != nil) {
+                cell?.titleLabel.text = String(indexPath.row+1) + "Year".localized()
+                
+            }
+            return cell!
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +54,11 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         case 0:
             return 9
         case 1:
-            return StudentDataController.sharedController.studentData?.StudyYear ?? 0
+            if let num  = StudentDataController.sharedController.studentData?.StudyYear {
+                return  num + 1
+            } else {
+                return 0
+            }
         default:
             return 0
         }
