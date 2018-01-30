@@ -36,6 +36,8 @@
 		269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598EE201D3DD0006641EB /* GradesTableViewCell.swift */; };
 		269598F1201D4059006641EB /* GradesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F0201D4059006641EB /* GradesController.swift */; };
 		269598F3201D406D006641EB /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F2201D406D006641EB /* Grades.swift */; };
+		26D73F8D20211BA600C54F94 /* AverageGradesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D73F8C20211BA600C54F94 /* AverageGradesController.swift */; };
+		26D73F8F20211EFF00C54F94 /* AverageGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D73F8E20211EFF00C54F94 /* AverageGrade.swift */; };
 		26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E41DC21FE707DA00FD4A7C /* ChooseLanguageViewController.swift */; };
 		26E41DC41FE8640C00FD4A7C /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E41DC61FE8640C00FD4A7C /* Language.storyboard */; };
 		26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E41DD21FE865E300FD4A7C /* Localizable.strings */; };
@@ -110,6 +112,8 @@
 		269598EE201D3DD0006641EB /* GradesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesTableViewCell.swift; sourceTree = "<group>"; };
 		269598F0201D4059006641EB /* GradesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesController.swift; sourceTree = "<group>"; };
 		269598F2201D406D006641EB /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
+		26D73F8C20211BA600C54F94 /* AverageGradesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageGradesController.swift; sourceTree = "<group>"; };
+		26D73F8E20211EFF00C54F94 /* AverageGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageGrade.swift; sourceTree = "<group>"; };
 		26E41DC21FE707DA00FD4A7C /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
 		26E41DD31FE865F100FD4A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		26ED3A61201D2A8700836EEC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -154,8 +158,9 @@
 				2624F4A9200E797100CE1DCF /* UserController.swift */,
 				2624F4B2200FEF4A00CE1DCF /* NewsController.swift */,
 				262A29C32014BF78004C0F7F /* StudentDataController.swift */,
-				26ED3A63201D2AA600836EEC /* ImagesController.swift */,
 				269598F0201D4059006641EB /* GradesController.swift */,
+				26ED3A63201D2AA600836EEC /* ImagesController.swift */,
+				26D73F8C20211BA600C54F94 /* AverageGradesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				262A29C82014C921004C0F7F /* StudentData.swift */,
 				26ED3A61201D2A8700836EEC /* Image.swift */,
 				269598F2201D406D006641EB /* Grades.swift */,
+				26D73F8E20211EFF00C54F94 /* AverageGrade.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -692,6 +698,7 @@
 				265E33D12007C7740033B393 /* LoginViewController.swift in Sources */,
 				269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */,
 				262A29C42014BF78004C0F7F /* StudentDataController.swift in Sources */,
+				26D73F8D20211BA600C54F94 /* AverageGradesController.swift in Sources */,
 				262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
@@ -712,6 +719,7 @@
 				26689EA81FD88D750081FA12 /* FirstViewController.swift in Sources */,
 				26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */,
 				262A29C92014C921004C0F7F /* StudentData.swift in Sources */,
+				26D73F8F20211EFF00C54F94 /* AverageGrade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         super.viewDidLoad()
         StudentDataController.sharedController.delegate = self
         StudentDataController.sharedController.getStudentData()
+        AverageGradesController.sharedController.getAvarageGrades()
         // Do any additional setup after loading the view.
     }
 
@@ -41,7 +42,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
             let cellReuseIdentifier = "studentData"
             let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? StudentDataTableViewCell
             if (StudentDataController.sharedController.studentData != nil) {
-                cell?.titleLabel.text = String(indexPath.row+1) + "Year".localized()
+                cell?.populateCell(row:indexPath.row)
                 
             }
             return cell!
@@ -55,7 +56,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
             return 9
         case 1:
             if let num  = StudentDataController.sharedController.studentData?.StudyYear {
-                return  num + 1
+                return  num
             } else {
                 return 0
             }
@@ -78,6 +79,16 @@ extension StatusDataViewController : StudentDataControllerDelegate {
         func onError() {
         }
     }
+
+extension StatusDataViewController : AverageGradesControllerDelegate {
+    func onSuccess(response: AverageGrades) {
+        self.tableView.reloadData()
+    }
+
+    func onError(error:NSError) {
+    }
+    
+}
     /*
     // MARK: - Navigation
 

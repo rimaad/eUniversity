@@ -197,4 +197,38 @@ class ApiClient {
             }
         }
     }
+    
+    func getAverageGrades(onResponse:@escaping (_ success:AverageGrades?, _ error:NSError?)->Void) {
+        let urlString = baseUrl + "/students/averagegrades/get/?byStudyYears=true"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let averageGradesData = try JSONDecoder().decode(AverageGradesValue.self, from: responseData)
+                        onResponse(averageGradesData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+        }
+    }
 }
