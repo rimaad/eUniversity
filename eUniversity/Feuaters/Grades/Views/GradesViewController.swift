@@ -8,10 +8,12 @@
 
 import UIKit
 
-class GradesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class GradesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource {
  
     @IBOutlet weak var tableView: UITableView!
-    
+    var pickerView:UIPickerView?
+    var nextBar = UIView()
+    var pickerValues = ["allYears".localized(),"firstYear".localized(),"secondYear".localized(),"third".localized()]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Additional bar button items
@@ -45,27 +47,42 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
             return 140
         }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 4
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerValues[row]
+    }
+    
  @objc func filterPressed() {
-    let alertController = UIAlertController(title: "Action Sheet", message: "What would you like to do?", preferredStyle: .actionSheet)
+        createActionSheetView()
+    }
     
-    let sendButton = UIAlertAction(title: "Send now", style: .default, handler: { (action) -> Void in
-        print("Ok button tapped")
-    })
-    
-    let  deleteButton = UIAlertAction(title: "Delete forever", style: .destructive, handler: { (action) -> Void in
-        print("Delete button tapped")
-    })
-    
-    let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
-        print("Cancel button tapped")
-    })
-    
-    
-    alertController.addAction(sendButton)
-    alertController.addAction(deleteButton)
-    alertController.addAction(cancelButton)
-    
-    self.present(alertController, animated: true, completion: nil)
+    func createActionSheetView() {
+        let myActionSheet =  UIAlertController(title: "Choose a year of study", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        myActionSheet.addAction(UIAlertAction(title: "AllYears".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            print("All")
+          
+        }))
+        myActionSheet.addAction(UIAlertAction(title: "FirstYear".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            
+        }))
+        myActionSheet.addAction(UIAlertAction(title: "SecondYear".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            
+        }))
+        
+        myActionSheet.addAction(UIAlertAction(title: "ThirdYear".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            
+        }))
+        
+        self.present(myActionSheet, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
