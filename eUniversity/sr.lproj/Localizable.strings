@@ -12,3 +12,8 @@
 "dateGradeTtile" = "Datum polaganja";
 "grade" = "Ocijena";
 "semester" = "Semestar'";
+"allYears" = "Sve godine";
+"secondYear" = "Druga godina";
+"thirdYear" = "Treca godina";
+"passed" = "Polozeni";
+"unpassed" = "Nepolozeni";

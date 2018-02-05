@@ -13,3 +13,10 @@
 "dateGradeTtile" = "Date";
 "semester" = "Semester'";
 "grade" = "Grade";
+"allYears" = "All Years";
+"firstYear" = "Prva godina";
+"firstYear" = "First year";
+"secondYear" = "Second year";
+"thirdYear" = "Third year";
+"passed" = "Passed";
+"unpassed" = "Unpassed";

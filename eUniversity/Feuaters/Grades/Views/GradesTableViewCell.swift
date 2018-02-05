@@ -9,6 +9,9 @@
 import UIKit
 
 class GradesTableViewCell: UITableViewCell {
+    @IBOutlet weak var dateStackView: UIStackView!
+    @IBOutlet weak var gradeStackView: UIStackView!
+    
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel! {
         didSet {
@@ -40,12 +43,19 @@ class GradesTableViewCell: UITableViewCell {
         // Initialization code
     }
     func populateCell(grade:Grade){
-        
-        courseNameLabel.text = grade.CourseName
+        if (grade.Grade != nil){
+        dateStackView.isHidden = false
+        gradeStackView.isHidden = false
         dateValueLabel.text = grade.GradeDate
+        gradeValueLabel.text = "\(grade.Grade!)"
+        }
+        else {
+            dateStackView.isHidden = true
+            gradeStackView.isHidden = true
+        }
+        courseNameLabel.text = grade.CourseName
         semestarValueLabel.text = "\(grade.Semester!)"
         etcsValueLabel.text = "\(grade.ECTS!)"
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

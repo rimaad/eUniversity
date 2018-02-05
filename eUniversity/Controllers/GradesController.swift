@@ -19,15 +19,33 @@ class GradesController: NSObject {
     let apiClient = ApiClient()
     var gradesData : StudentGrades?
     
-    
     func getGrades() {
     
         apiClient.getGrades() { (response, error) in
             if response != nil {
+                self.gradesData = nil
                 self.gradesData = response
                 self.delegate?.onSuccess(response: response!)
             }
         }
       
+    }
+    
+    func getGradesBySuccess(isPassed:String) {
+        apiClient.getGradesBySuccess(isPassed:isPassed) { (response, error) in
+            if response != nil {
+                self.gradesData = response
+                self.delegate?.onSuccess(response: response!)
+            }
+        }
+    }
+    
+    func getGradesByYear(yearOfStudy:String) {
+        apiClient.getGradesByYear(year:yearOfStudy) { (response, error) in
+            if response != nil {
+                self.gradesData = response
+                self.delegate?.onSuccess(response: response!)
+            }
+        }
     }
 }

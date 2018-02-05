@@ -14,12 +14,10 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     var pickerView:UIPickerView?
     var nextBar = UIView()
     var pickerValues = ["allYears".localized(),"firstYear".localized(),"secondYear".localized(),"third".localized()]
+    var gradesSuccess = ["passed".localized(),"unpassed".localized()]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Additional bar button items
-        let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(GradesViewController.filterPressed))
-        let button2 = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: Selector(("methodB")))
-        self.tabBarController?.navigationItem.setRightBarButtonItems([button1, button2], animated: true)
+        self.tabBarController?.tabBar.t
         GradesController.sharedController.delegate = self
         GradesController.sharedController.getGrades()
 
@@ -29,6 +27,25 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNavItems()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        hideNavItems()
+    }
+    
+    func setUpNavItems() {
+        // Additional bar button items
+        let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search-1"), style: .plain, target: self, action: #selector(GradesViewController.filterPressed))
+        let button2 = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(GradesViewController.filterSuccesPressed))
+        self.tabBarController?.navigationItem.setRightBarButtonItems([button1, button2], animated: true)
+    }
+    
+    func hideNavItems() {
+        self.tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,22 +81,40 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
         createActionSheetView()
     }
     
+ @objc func filterSuccesPressed() {
+        createSuccessActionSheetView()
+    }
+    
+    func createSuccessActionSheetView() {
+        let myActionSheet =  UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        myActionSheet.addAction(UIAlertAction(title: "passed".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            GradesController.sharedController.getGradesBySuccess(isPassed: "true")
+        }))
+        myActionSheet.addAction(UIAlertAction(title: "unpassed".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            GradesController.sharedController.getGradesBySuccess(isPassed: "false")
+        }))
+        
+        self.present(myActionSheet, animated: true, completion: nil)
+    }
+    
     func createActionSheetView() {
         let myActionSheet =  UIAlertController(title: "Choose a year of study", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         myActionSheet.addAction(UIAlertAction(title: "AllYears".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
-            print("All")
+            GradesController.sharedController.getGrades()
           
         }))
         myActionSheet.addAction(UIAlertAction(title: "FirstYear".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            GradesController.sharedController.getGradesByYear(yearOfStudy: "1")
             
         }))
         myActionSheet.addAction(UIAlertAction(title: "SecondYear".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
-            
+            GradesController.sharedController.getGradesByYear(yearOfStudy: "2")
         }))
         
         myActionSheet.addAction(UIAlertAction(title: "ThirdYear".localized(), style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
-            
+            GradesController.sharedController.getGradesByYear(yearOfStudy: "3")
         }))
         
         self.present(myActionSheet, animated: true, completion: nil)
