@@ -17,7 +17,7 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     var gradesSuccess = ["passed".localized(),"unpassed".localized()]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.t
+       self.tabBarItem.title = "grades".localized()
         GradesController.sharedController.delegate = self
         GradesController.sharedController.getGrades()
 

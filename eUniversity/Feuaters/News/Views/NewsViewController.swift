@@ -15,6 +15,8 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         NewsController.sharedController.delegate = self
         NewsController.sharedController.getNews()
+        self.tabBarItem.image = nil
+        self.tabBarItem.title = "news".localized()
 
         // Do any additional setup after loading the view.
     }

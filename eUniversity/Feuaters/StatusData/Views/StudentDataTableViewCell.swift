@@ -18,7 +18,8 @@ class StudentDataTableViewCell: UITableViewCell {
         // Initialization code
     }
     func populateCell(row:Int) {
-        titleLabel.text = String(row+1) + "Year".localized()
+        let averageGrade = AverageGradesController.sharedController.averageGradesData?.AverageGrades[row].AverageGrade.rounded(toPlaces: 2) ?? 0.00
+        titleLabel.text = String(row+1) + "Year".localized() + " (\(averageGrade))"
         if ((AverageGradesController.sharedController.averageGradesData?.AverageGrades) != nil) { progressBar.setProgress(Float((AverageGradesController.sharedController.averageGradesData?.AverageGrades[row].AverageGrade)!)/10, animated: true)
             
         }

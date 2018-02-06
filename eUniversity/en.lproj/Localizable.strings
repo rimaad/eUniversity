@@ -13,6 +13,7 @@
 "dateGradeTtile" = "Date";
 "semester" = "Semester'";
 "grade" = "Grade";
+"grades" = "Grades";
 "allYears" = "All Years";
 "firstYear" = "Prva godina";
 "firstYear" = "First year";
@@ -20,3 +21,5 @@
 "thirdYear" = "Third year";
 "passed" = "Passed";
 "unpassed" = "Unpassed";
+"news" = "News";
+"statusData" = "Status data";

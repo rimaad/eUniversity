@@ -19,6 +19,7 @@
 		262A29C42014BF78004C0F7F /* StudentDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C32014BF78004C0F7F /* StudentDataController.swift */; };
 		262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */; };
 		262A29C92014C921004C0F7F /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C82014C921004C0F7F /* StudentData.swift */; };
+		2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1A8202A637800AC7148 /* DoubleExtension.swift */; };
 		2640776F2012363A000D6073 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640776E2012363A000D6073 /* News.swift */; };
 		265E33CB20068A890033B393 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265E33CA20068A890033B393 /* GoogleService-Info.plist */; };
 		265E33CE2007C6B70033B393 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265E33CD2007C6B70033B393 /* Login.storyboard */; };
@@ -84,6 +85,7 @@
 		262A29C32014BF78004C0F7F /* StudentDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataController.swift; sourceTree = "<group>"; };
 		262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDataTableViewCell.swift; sourceTree = "<group>"; };
 		262A29C82014C921004C0F7F /* StudentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
+		2632B1A8202A637800AC7148 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2640776E2012363A000D6073 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		265E33C92006835E0033B393 /* eUniversity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eUniversity.entitlements; sourceTree = "<group>"; };
 		265E33CA20068A890033B393 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2628AE661FE9AE5200A6C37A /* StringExtension.swift */,
+				2632B1A8202A637800AC7148 /* DoubleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */,
 				2640776F2012363A000D6073 /* News.swift in Sources */,
 				262A29C02013E8B8004C0F7F /* StatusDataViewController.swift in Sources */,
+				2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */,
 				2624F4AA200E797100CE1DCF /* UserController.swift in Sources */,
 				269598F1201D4059006641EB /* GradesController.swift in Sources */,
 				269598ED201D3DB6006641EB /* GradesViewController.swift in Sources */,

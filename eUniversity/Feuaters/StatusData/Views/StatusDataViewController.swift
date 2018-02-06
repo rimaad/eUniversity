@@ -18,6 +18,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         StudentDataController.sharedController.delegate = self
         StudentDataController.sharedController.getStudentData()
         AverageGradesController.sharedController.getAvarageGrades()
+        self.tabBarItem.title = "statusData".localized()
         // Do any additional setup after loading the view.
     }
 
@@ -56,7 +57,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
             return 9
         case 1:
             if let num  = StudentDataController.sharedController.studentData?.StudyYear {
-                return  num
+                return  num 
             } else {
                 return 0
             }
