@@ -20,6 +20,7 @@
 		262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */; };
 		262A29C92014C921004C0F7F /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C82014C921004C0F7F /* StudentData.swift */; };
 		2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1A8202A637800AC7148 /* DoubleExtension.swift */; };
+		2632B1AC202BA4F400AC7148 /* eUniversityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1AB202BA4F400AC7148 /* eUniversityError.swift */; };
 		2640776F2012363A000D6073 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640776E2012363A000D6073 /* News.swift */; };
 		265E33CB20068A890033B393 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265E33CA20068A890033B393 /* GoogleService-Info.plist */; };
 		265E33CE2007C6B70033B393 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265E33CD2007C6B70033B393 /* Login.storyboard */; };
@@ -42,6 +43,10 @@
 		26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E41DC21FE707DA00FD4A7C /* ChooseLanguageViewController.swift */; };
 		26E41DC41FE8640C00FD4A7C /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E41DC61FE8640C00FD4A7C /* Language.storyboard */; };
 		26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E41DD21FE865E300FD4A7C /* Localizable.strings */; };
+		26EA05AC202D01BF00CE1D24 /* SemesterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA05AB202D01BF00CE1D24 /* SemesterViewController.swift */; };
+		26EA05AE202D068400CE1D24 /* SemesterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA05AD202D068400CE1D24 /* SemesterTableViewCell.swift */; };
+		26EA05B0202D09A300CE1D24 /* SemesterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA05AF202D09A300CE1D24 /* SemesterController.swift */; };
+		26EA05B2202D0A0D00CE1D24 /* Semestar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA05B1202D0A0D00CE1D24 /* Semestar.swift */; };
 		26ED3A62201D2A8700836EEC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED3A61201D2A8700836EEC /* Image.swift */; };
 		26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED3A63201D2AA600836EEC /* ImagesController.swift */; };
 		A20822CE0E049EE8CFD0498E /* Pods_eUniversityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F99827BFB20DB6414004B9 /* Pods_eUniversityUITests.framework */; };
@@ -86,6 +91,7 @@
 		262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDataTableViewCell.swift; sourceTree = "<group>"; };
 		262A29C82014C921004C0F7F /* StudentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
 		2632B1A8202A637800AC7148 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		2632B1AB202BA4F400AC7148 /* eUniversityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUniversityError.swift; sourceTree = "<group>"; };
 		2640776E2012363A000D6073 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		265E33C92006835E0033B393 /* eUniversity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eUniversity.entitlements; sourceTree = "<group>"; };
 		265E33CA20068A890033B393 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 		26D73F8E20211EFF00C54F94 /* AverageGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageGrade.swift; sourceTree = "<group>"; };
 		26E41DC21FE707DA00FD4A7C /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
 		26E41DD31FE865F100FD4A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		26EA05AB202D01BF00CE1D24 /* SemesterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterViewController.swift; sourceTree = "<group>"; };
+		26EA05AD202D068400CE1D24 /* SemesterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTableViewCell.swift; sourceTree = "<group>"; };
+		26EA05AF202D09A300CE1D24 /* SemesterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterController.swift; sourceTree = "<group>"; };
+		26EA05B1202D0A0D00CE1D24 /* Semestar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semestar.swift; sourceTree = "<group>"; };
 		26ED3A61201D2A8700836EEC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		26ED3A63201D2AA600836EEC /* ImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
 		61C53F7507E8CC0120073DCA /* Pods-eUniversityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversityUITests/Pods-eUniversityUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,15 +173,9 @@
 				269598F0201D4059006641EB /* GradesController.swift */,
 				26ED3A63201D2AA600836EEC /* ImagesController.swift */,
 				26D73F8C20211BA600C54F94 /* AverageGradesController.swift */,
+				26EA05AF202D09A300CE1D24 /* SemesterController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		2624F4AB200E944400CE1DCF /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		2624F4AC200FE8EC00CE1DCF /* News */ = {
@@ -210,6 +214,7 @@
 				26ED3A61201D2A8700836EEC /* Image.swift */,
 				269598F2201D406D006641EB /* Grades.swift */,
 				26D73F8E20211EFF00C54F94 /* AverageGrade.swift */,
+				26EA05B1202D0A0D00CE1D24 /* Semestar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +235,14 @@
 				26770274201A6DD6006D0590 /* StudentDataTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2632B1AA202BA4CB00AC7148 /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2632B1AB202BA4F400AC7148 /* eUniversityError.swift */,
+			);
+			path = ErrorHandler;
 			sourceTree = "<group>";
 		};
 		265E33CC2007C69C0033B393 /* Login */ = {
@@ -282,7 +295,7 @@
 		26689EA41FD88D750081FA12 /* eUniversity */ = {
 			isa = PBXGroup;
 			children = (
-				2624F4AB200E944400CE1DCF /* Coordinators */,
+				2632B1AA202BA4CB00AC7148 /* ErrorHandler */,
 				2624F4A8200E795500CE1DCF /* Controllers */,
 				265E33D22007D5540033B393 /* Services */,
 				265E33CA20068A890033B393 /* GoogleService-Info.plist */,
@@ -339,6 +352,7 @@
 		26E41DC01FE707A000FD4A7C /* Feuaters */ = {
 			isa = PBXGroup;
 			children = (
+				26EA05AA202D019C00CE1D24 /* Smester */,
 				269598EA201D3D98006641EB /* Grades */,
 				262A29BE2013E886004C0F7F /* StatusData */,
 				2624F4AC200FE8EC00CE1DCF /* News */,
@@ -356,6 +370,15 @@
 				26E41DC61FE8640C00FD4A7C /* Language.storyboard */,
 			);
 			path = "Choose Language";
+			sourceTree = "<group>";
+		};
+		26EA05AA202D019C00CE1D24 /* Smester */ = {
+			isa = PBXGroup;
+			children = (
+				26EA05AB202D01BF00CE1D24 /* SemesterViewController.swift */,
+				26EA05AD202D068400CE1D24 /* SemesterTableViewCell.swift */,
+			);
+			path = Smester;
 			sourceTree = "<group>";
 		};
 		6BF9D9E7DBA9A3E796B56D70 /* Frameworks */ = {
@@ -707,11 +730,15 @@
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
 				26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */,
 				2640776F2012363A000D6073 /* News.swift in Sources */,
+				26EA05AE202D068400CE1D24 /* SemesterTableViewCell.swift in Sources */,
 				262A29C02013E8B8004C0F7F /* StatusDataViewController.swift in Sources */,
 				2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */,
 				2624F4AA200E797100CE1DCF /* UserController.swift in Sources */,
+				26EA05AC202D01BF00CE1D24 /* SemesterViewController.swift in Sources */,
 				269598F1201D4059006641EB /* GradesController.swift in Sources */,
+				26EA05B2202D0A0D00CE1D24 /* Semestar.swift in Sources */,
 				269598ED201D3DB6006641EB /* GradesViewController.swift in Sources */,
+				2632B1AC202BA4F400AC7148 /* eUniversityError.swift in Sources */,
 				26ED3A62201D2A8700836EEC /* Image.swift in Sources */,
 				26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */,
 				2624F4AF200FEA5700CE1DCF /* NewsViewController.swift in Sources */,
@@ -724,6 +751,7 @@
 				26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */,
 				262A29C92014C921004C0F7F /* StudentData.swift in Sources */,
 				26D73F8F20211EFF00C54F94 /* AverageGrade.swift in Sources */,
+				26EA05B0202D09A300CE1D24 /* SemesterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,11 +947,11 @@
 				INFOPLIST_FILE = eUniversity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eUniversity.app;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.e-university.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -939,11 +967,11 @@
 				INFOPLIST_FILE = eUniversity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eUniversity.app;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.e-university.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
