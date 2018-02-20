@@ -8,12 +8,19 @@
 
 import UIKit
 
+
+
 class GradesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource {
  
     @IBOutlet weak var tableView: UITableView!
     var pickerView:UIPickerView?
     var nextBar = UIView()
     var pickerValues = ["allYears".localized(),"firstYear".localized(),"secondYear".localized(),"third".localized()]
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.title = "grades".localized()
+    }
     var gradesSuccess = ["passed".localized(),"unpassed".localized()]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +46,7 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func setUpNavItems() {
         // Additional bar button items
-        let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search-1"), style: .plain, target: self, action: #selector(GradesViewController.filterPressed))
+        let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(GradesViewController.filterPressed))
         let button2 = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(GradesViewController.filterSuccesPressed))
         self.tabBarController?.navigationItem.setRightBarButtonItems([button1, button2], animated: true)
     }

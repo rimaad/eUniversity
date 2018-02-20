@@ -8,6 +8,22 @@
 
 import UIKit
 
-class SemesterController: NSObject {
+protocol  SemesterControllerDelegate: class {
+    func onSuccess(response: Semesters)
+    func onError(error:NSError)
+}
 
+class SemesterController: NSObject {
+    weak var delegate : SemesterControllerDelegate?
+    let apiClient = ApiClient()
+    var semesterData : Semesters?
+    static let sharedController = SemesterController()
+    func getSemesters(){
+        apiClient.getSemesters(){(response, error) in
+            if response != nil {
+                self.semesterData = response
+                self.delegate?.onSuccess(response: response!)
+            }
+        }
+    }
 }

@@ -25,7 +25,10 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.title = "StudentStatus".localized()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let countNum =  NewsController.sharedController.announcments?.Announcements.count {
             return countNum

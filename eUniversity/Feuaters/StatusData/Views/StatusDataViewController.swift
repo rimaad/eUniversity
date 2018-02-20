@@ -18,7 +18,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         StudentDataController.sharedController.delegate = self
         StudentDataController.sharedController.getStudentData()
         AverageGradesController.sharedController.getAvarageGrades()
-        self.tabBarItem.title = "statusData".localized()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -70,6 +70,13 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.title = "statusData".localized()
+    }
+    
 
 }
 

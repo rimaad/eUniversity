@@ -8,6 +8,24 @@
 
 import UIKit
 
-class Semestar: NSObject {
+struct SemestarValue: Decodable {
+  var  value : Semesters
+}
 
+struct Semesters: Decodable {
+    var  Semesters : [Semester]
+}
+
+struct Semester : Decodable {
+    var AcademicYear: String?
+    var Curriculum: String?
+    var Semester :  Int?
+    var SemesterCount : Int?
+    var SemesterDate:String?
+    var SemesterDescription:String?
+    var SemesterID: Int?
+    var Status: Int?
+    var StudyType: String?
+    var StudyYear: Int?
+    var VerifiedDate:String?
 }

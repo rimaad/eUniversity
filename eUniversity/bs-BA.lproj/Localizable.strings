@@ -22,3 +22,8 @@
 "unpassed" = "Nepolozeni";
 "news" = "News";
 "statusData" = "Statusni podaci";
+"semester"  = "Semestar";
+"attendances" = "Prisustvovanje";
+"attendances" = "Attendances";
+"enrollmentTitleDate" = "Datum upisa :";
+"VerifiedDate" = "Datum ovjere :";
