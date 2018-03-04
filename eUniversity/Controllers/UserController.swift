@@ -10,7 +10,7 @@ import UIKit
 
 protocol UserControllerDelegate: class {
     func onSuccess()
-    func onError()
+    func onError(error:eUniversityError)
 }
 
 class UserController: NSObject {
@@ -28,7 +28,7 @@ class UserController: NSObject {
             if response != nil  {
             self.delegate?.onSuccess()
             } else if error != nil {
-                self.delegate?.onError()
+                self.delegate?.onError(error: error!)
             }
         }
     }

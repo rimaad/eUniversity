@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserController.sharedController.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -44,8 +44,8 @@ extension LoginViewController:UserControllerDelegate {
         self.present(filterVC, animated: true, completion: nil)
     }
     
-    func onError() {
-        SVProgressHUD.dismiss()
+    func onError(error: eUniversityError){
+        SVProgressHUD.showError(withStatus: error.exceptionMessage)
 }
 
 }

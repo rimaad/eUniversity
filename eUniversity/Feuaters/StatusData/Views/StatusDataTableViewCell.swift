@@ -29,33 +29,49 @@ class StatusDataTableViewCell: UITableViewCell {
         
         switch cellIndex {
         case 0:
-            statusDataLabel.text = "IndexNumber".localized()
-            statusDataSubtitle.text = StudentDataController.sharedController.studentData?.StudentNumber
+            statusDataLabel.text = UserController.sharedController.userName
+            statusDataSubtitle.text = "IndexNumber".localized() + (StudentDataController.sharedController.studentData?.StudentNumber ?? "")
+            statusDataImageView.image = #imageLiteral(resourceName: "personal_info")
+
         case 1:
-            statusDataLabel.text = "Author".localized()
-            statusDataSubtitle.text = UserController.sharedController.userName
-        case 2:
-            statusDataLabel.text = "email".localized()
+            statusDataSubtitle.text = "EnrollmentYear".localized()
+            statusDataLabel.text = StudentDataController.sharedController.studentData?.EnrollmentYear
+            statusDataImageView.image = #imageLiteral(resourceName: "year_enrollment")
+       // case 2:
+        //    statusDataLabel.text = "email".localized()
            //statusDataSubtitle.text = UserController.sharedController
-        case 3:
-            statusDataLabel.text = "EnrollmentYear".localized()
-            statusDataSubtitle.text = StudentDataController.sharedController.studentData?.EnrollmentYear
-        case 4:
+        case 2:
             statusDataLabel.text = "EnrollmentDate".localized()
             statusDataSubtitle.text = StudentDataController.sharedController.studentData?.EnrollmentDate
-        case 5:
+            statusDataImageView.image = #imageLiteral(resourceName: "date_icon")
+        case 3:
             statusDataLabel.text = "Faculty".localized()
             statusDataSubtitle.text = StudentDataController.sharedController.studentData?.Faculty
-        case 6:
+            statusDataImageView.image = #imageLiteral(resourceName: "faculty_icon")
+        case 4:
             statusDataLabel.text = "Department".localized()
             statusDataSubtitle.text = StudentDataController.sharedController.studentData?.Department
-        case 7:
+            statusDataImageView.image = #imageLiteral(resourceName: "department")
+            
+        case 5:
             statusDataLabel.text = "Curriculum".localized()
-           statusDataSubtitle.text = StudentDataController.sharedController.studentData?.Curriculum
-        case 8:
+            statusDataSubtitle.text = StudentDataController.sharedController.studentData?.Curriculum
+            statusDataImageView.image = #imageLiteral(resourceName: "curiculum")
+            
+        case 6:
             statusDataLabel.text = "StudyYear".localized()
-            statusDataSubtitle.text = String(describing:(StudentDataController.sharedController.studentData?.StudyYear ?? 0))
-   
+            let semester = "/" + "\(StudentDataController.sharedController.studentData?.Semester ?? 0)"
+            statusDataSubtitle.text = String(describing:(StudentDataController.sharedController.studentData?.StudyYear ?? 0)) + semester
+            statusDataImageView.image = #imageLiteral(resourceName: "study_year_icon")
+        case 7:
+            statusDataLabel.text = StudentDataController.sharedController.studentData?.StudyType
+            statusDataSubtitle.text = "StudyType".localized()
+            statusDataImageView.image = #imageLiteral(resourceName: "study_type")
+            
+        case 8 :
+            statusDataLabel.text = StudentDataController.sharedController.studentData?.StudentStatus
+            statusDataSubtitle.text = "StudentStatus".localized()
+            statusDataImageView.image = #imageLiteral(resourceName: "status_student")
         default:
             break
         }

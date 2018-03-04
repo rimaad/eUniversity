@@ -27,3 +27,5 @@
 "attendances" = "Attendances";
 "enrollmentTitleDate" = "Enrollment date :";
 "VerifiedDate" = "Verified date :";
+"StudyType" =  "Study type";
+"StudentStatus" = "Student status";

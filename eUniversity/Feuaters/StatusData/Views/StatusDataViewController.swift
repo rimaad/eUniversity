@@ -75,6 +75,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         super.awakeFromNib()
         
         self.title = "statusData".localized()
+        self.tabBarItem.image = #imageLiteral(resourceName: "profile-icon")
     }
     
 

@@ -8,7 +8,7 @@ target 'eUniversity' do
   pod 'Localize-Swift', '~> 2.0'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-  pod 'Alamofire', '~> 4.5'
+  pod 'Alamofire', '~> 4.6'
   pod 'SVProgressHUD'
 
   target 'eUniversityTests' do

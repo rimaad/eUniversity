@@ -15,13 +15,13 @@ let baseUrl = "https://api.euniversity.ba/api"
 class ApiClient {
     
 
-    func login(userName:String,password:String,onResponse:@escaping (_ success:User?, _ error:NSError?)->Void) {
+    func login(userName:String,password:String,onResponse:@escaping (_ success:User?, _ error:eUniversityError?)->Void) {
         let deviceToken = UserDefaults.standard.object(forKey: "fcmToken")
         let urlString = "http://api.euniversity.ba/api/students/authentication/login"
         guard let url = URL(string:urlString) else {return}
         let parameters : Parameters = ["username" : userName,
-                          "password" : password,
-                          "deviceToken" : deviceToken!]
+                                       "password" : password,
+                                       "deviceToken" : deviceToken!]
         let headers = [
             "Accept": "application/json",
             "Content-Type" :"application/json"
@@ -34,25 +34,34 @@ class ApiClient {
                 case 200:
                     guard let responseData  = response.data  else {
                         return }
-                   
+                    
                     do {
                         let user = try JSONDecoder().decode(Value.self, from: responseData)
-                       UserController.sharedController.userName = user.value.FirstName
-                       UserController.sharedController.accessToken = user.value.AuthToken
-                       UserController.sharedController.StudentID = user.value.StudentID
-                       onResponse(user.value,nil)
+                        UserController.sharedController.userName = user.value.FirstName
+                        UserController.sharedController.accessToken = user.value.AuthToken
+                        UserController.sharedController.StudentID = user.value.StudentID
+                        onResponse(user.value,nil)
                     }
                     catch let jsnError{
                         print("jsonError",jsnError)
                     }
                 default:
                     print("error with response status: \(status)")
-                    onResponse(nil,nil)
+                    if status == 401 {
+                        do {
+                             let errorData = try JSONDecoder().decode(eUniversityError.self, from:response.data! )
+                            
+                                onResponse(nil,errorData)
+            
+                        }
+                        catch let jsnError{
+                            print("jsonError",jsnError)
+                        }
+                    }
                 }
             }
         }
     }
-    
     func getNews(onResponse:@escaping (_ success:Announcements?, _ error:NSError?)->Void) {
         
         
@@ -123,7 +132,14 @@ class ApiClient {
                     }
                 default:
                     print("error with response status: \(status)")
-                    onResponse(nil,nil)
+                    if status == 401 {
+                        guard let responseData  = response.data  else {
+                            return }
+                     //
+                         onResponse(nil,nil)
+                    }
+                    
+                   
                 }
             }
             

@@ -20,6 +20,7 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.awakeFromNib()
         
         self.title = "grades".localized()
+        self.tabBarItem.image = #imageLiteral(resourceName: "grades")
     }
     var gradesSuccess = ["passed".localized(),"unpassed".localized()]
     override func viewDidLoad() {

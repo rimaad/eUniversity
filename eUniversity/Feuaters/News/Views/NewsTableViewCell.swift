@@ -19,8 +19,22 @@ class NewsTableViewCell: UITableViewCell {
         newsTitleLabel.text = news.Title
         newsTextLabel.text = news.Text
         newsDateLabel.text = news.Date
-        ImagesController.sharedController.getAnnouncmentsImages(announcmentID: String(news.AnnouncementID))
+        newsImageView.image = setImage(imageID: news.AnnouncementIconID)
+    }
+    
+    func setImage(imageID:Int) -> UIImage {
         
+        switch imageID {
+        case 0:
+            return #imageLiteral(resourceName: "tip_default")
+        case 1:
+            return #imageLiteral(resourceName: "tip_info")
+        case 2:
+            return #imageLiteral(resourceName: "tip_datum")
+        default:
+         return #imageLiteral(resourceName: "tip_default")
+            
+        }
     }
     
     override func awakeFromNib() {

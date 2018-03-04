@@ -16,6 +16,7 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         super.awakeFromNib()
         
         self.title = "semester".localized()
+        self.tabBarItem.image = #imageLiteral(resourceName: "semesters")
     }
 
     override func viewDidLoad() {

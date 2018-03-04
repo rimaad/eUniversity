@@ -8,6 +8,8 @@
 
 import UIKit
 
-class eUniversityError: NSObject {
-
+class eUniversityError: Decodable {
+    var exceptionCode :Int?
+    var exceptionMessage:String?
+    var value:String?
 }

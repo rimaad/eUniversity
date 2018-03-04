@@ -26,10 +26,11 @@ class AttendanceTableViewCell: UITableViewCell {
     
     func populateCell(attendance:Attendance){
         courseTitleLabel.text = attendance.CourseName
-        progressBar.setProgress(Float(attendance.Percentage!), animated: true)
-        let eventHours = "\(attendance.EventHours ?? 0)"
-        let studentHours = "/" + "\(attendance.StudentHours ?? 0)"
-        attendanceLabel.text = eventHours + studentHours
+        let precentageValue = Float(attendance.Percentage ?? 0) / 100
+        progressBar.setProgress(precentageValue, animated: false)
+        //let eventHours = "\(attendance.EventHours ?? 0)"
+        let studentHours = "\(attendance.Percentage ?? 0)"
+        attendanceLabel.text = studentHours + "%"
     }
 
 }

@@ -59,6 +59,7 @@ class AttendanceViewController: UIViewController,UITableViewDataSource,UITableVi
         super.awakeFromNib()
         
         self.title = "attendances".localized()
+        self.tabBarItem.image = #imageLiteral(resourceName: "exam_dates")
     }
     
 }

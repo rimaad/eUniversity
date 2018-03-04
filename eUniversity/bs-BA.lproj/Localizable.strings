@@ -27,3 +27,5 @@
 "attendances" = "Attendances";
 "enrollmentTitleDate" = "Datum upisa :";
 "VerifiedDate" = "Datum ovjere :";
+"StudyType" =  "Način studiranja";
+"StudentStatus" = "Status studenta";
