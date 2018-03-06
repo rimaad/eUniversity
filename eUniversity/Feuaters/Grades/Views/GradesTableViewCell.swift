@@ -9,9 +9,9 @@
 import UIKit
 
 class GradesTableViewCell: UITableViewCell {
-    @IBOutlet weak var dateStackView: UIStackView!
-    @IBOutlet weak var gradeStackView: UIStackView!
+  
     
+    @IBOutlet weak var gradeImageView: UIImageView!
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel! {
         didSet {
@@ -43,19 +43,22 @@ class GradesTableViewCell: UITableViewCell {
         // Initialization code
     }
     func populateCell(grade:Grade){
-        if (grade.Grade != nil){
-        dateStackView.isHidden = false
-        gradeStackView.isHidden = false
-        dateValueLabel.text = grade.GradeDate
-        gradeValueLabel.text = "\(grade.Grade!)"
+        if let gradeValue = grade.Grade {
+            dateValueLabel.text = grade.GradeDate
+            gradeValueLabel.text = "\(gradeValue)"
+            courseNameValueLabel.text = grade.CourseName
+            semestarValueLabel.text = "\(grade.Semester!)." + " semestar"
+            etcsValueLabel.text = "\(grade.ECTS!)." + " ECTS"
+            gradeImageView.image = #imageLiteral(resourceName: "circle_lime")
         }
         else {
-            dateStackView.isHidden = true
-            gradeStackView.isHidden = true
+            gradeImageView.image = #imageLiteral(resourceName: "circle_red")
+            gradeValueLabel.text = "-"
+            courseNameValueLabel.text = grade.CourseName
+            semestarValueLabel.text = "\(grade.Semester!)." + " semestar"
+            etcsValueLabel.text = "\(grade.ECTS!)." + " ECTS"
+
         }
-        courseNameLabel.text = grade.CourseName
-        semestarValueLabel.text = "\(grade.Semester!)"
-        etcsValueLabel.text = "\(grade.ECTS!)"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -48,7 +48,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsM-Zk-CPB">
                                 <rect key="frame" x="94" y="394" width="187" height="50"/>
-                                <color key="backgroundColor" red="0.20005846020000001" green="0.4775326848" blue="0.71844452619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.27293050289154053" green="0.76095062494277954" blue="0.79410165548324585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UXq-3Q-tZm"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                                     <action selector="loginPressed:" destination="IDw-kE-pps" eventType="touchUpInside" id="MZv-tu-VF3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Hc-1d-0EC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoFinal" translatesAutoresizingMaskIntoConstraints="NO" id="2Hc-1d-0EC">
                                 <rect key="frame" x="55" y="91" width="265" height="95"/>
                             </imageView>
                         </subviews>
@@ -94,6 +94,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="340" height="60"/>
+        <image name="logoFinal" width="217" height="42"/>
     </resources>
 </document>

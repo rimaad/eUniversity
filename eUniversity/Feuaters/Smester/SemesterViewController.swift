@@ -14,7 +14,6 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.title = "semester".localized()
         self.tabBarItem.image = #imageLiteral(resourceName: "semesters")
     }
@@ -24,6 +23,10 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         SemesterController.sharedController.getSemesters()
         SemesterController.sharedController.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+       
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,6 +60,23 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openSemesterDetail()
+    }
+    
+    func openSemesterDetail() {
+        
+        let storyBoard = UIStoryboard(name:"Semestar", bundle:nil)
+        let semesterVC = storyBoard.instantiateViewController(withIdentifier: "semestarDetail")
+        self.present(semesterVC, animated: true, completion: nil)
+        
+      /*  if let viewController = UIStoryboard(name: "Semestar", bundle: nil).instantiateViewController(withIdentifier: "semestarDetail") as?SemesterDetailViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }*/
     }
 }
 

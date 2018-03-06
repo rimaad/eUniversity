@@ -391,4 +391,42 @@ class ApiClient {
         }
         
     }
+    
+    func getSemesterDetail(onResponse:@escaping (_ success:Attendances?, _ error:NSError?)->Void) {
+        
+        
+        let urlString = "http://api.euniversity.ba/api/students/attendance/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let attendancesData = try JSONDecoder().decode(AttendanceValue.self, from: responseData)
+                        onResponse(attendancesData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+        
+    }
 }
