@@ -95,7 +95,7 @@
                         <viewLayoutGuide key="safeArea" id="UPH-WJ-vFi"/>
                     </view>
                     <navigationItem key="navigationItem" id="zUw-2c-n8L">
-                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="yn4-GB-EPs">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" style="done" id="yn4-GB-EPs">
                             <connections>
                                 <action selector="backAction:" destination="dOK-dG-cgQ" id="3NY-VH-apY"/>
                             </connections>
@@ -110,4 +110,7 @@
             <point key="canvasLocation" x="548" y="-873"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backButton" width="25" height="25"/>
+    </resources>
 </document>

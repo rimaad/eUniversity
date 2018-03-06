@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260325AC204F3EA6002A9481 /* profile_pic_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 260325AB204F3EA5002A9481 /* profile_pic_default.png */; };
+		260325AF204F4063002A9481 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325AE204F4063002A9481 /* MenuViewController.swift */; };
+		260325B1204F40AB002A9481 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325B0204F40AB002A9481 /* MenuTableViewCell.swift */; };
 		2624F4A7200D40F300CE1DCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4A6200D40F300CE1DCF /* User.swift */; };
 		2624F4AA200E797100CE1DCF /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4A9200E797100CE1DCF /* UserController.swift */; };
 		2624F4AF200FEA5700CE1DCF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4AE200FEA5700CE1DCF /* NewsViewController.swift */; };
@@ -84,6 +87,9 @@
 
 /* Begin PBXFileReference section */
 		10893E723E906EA3C4C344F5 /* Pods_eUniversity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eUniversity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		260325AB204F3EA5002A9481 /* profile_pic_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_pic_default.png; sourceTree = "<group>"; };
+		260325AE204F4063002A9481 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		260325B0204F40AB002A9481 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		2624F4A6200D40F300CE1DCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2624F4A9200E797100CE1DCF /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		2624F4AE200FEA5700CE1DCF /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +193,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260325AD204F4042002A9481 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				260325AE204F4063002A9481 /* MenuViewController.swift */,
+				260325B0204F40AB002A9481 /* MenuTableViewCell.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		2624F4A8200E795500CE1DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +382,7 @@
 				26689EA91FD88D750081FA12 /* SecondViewController.swift */,
 				2628AE801FEEE0D100A6C37A /* Main.storyboard */,
 				26689EAE1FD88D750081FA12 /* Assets.xcassets */,
+				260325AB204F3EA5002A9481 /* profile_pic_default.png */,
 				26689EB01FD88D750081FA12 /* LaunchScreen.storyboard */,
 				26689EB31FD88D750081FA12 /* Info.plist */,
 				26E41DD21FE865E300FD4A7C /* Localizable.strings */,
@@ -412,6 +428,7 @@
 		26E41DC01FE707A000FD4A7C /* Feuaters */ = {
 			isa = PBXGroup;
 			children = (
+				260325AD204F4042002A9481 /* Menu */,
 				262E6236204C68C400ECBC29 /* Announcements */,
 				2628BB04203B6E0800B2106E /* Attendances */,
 				26EA05AA202D019C00CE1D24 /* Smester */,
@@ -598,6 +615,7 @@
 				2628AE821FEEE0D200A6C37A /* Main.storyboard in Resources */,
 				265E33CE2007C6B70033B393 /* Login.storyboard in Resources */,
 				26689EAF1FD88D750081FA12 /* Assets.xcassets in Resources */,
+				260325AC204F3EA6002A9481 /* profile_pic_default.png in Resources */,
 				26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */,
 				26E41DC41FE8640C00FD4A7C /* Language.storyboard in Resources */,
 				26D53EB0204DD6CE00B920E9 /* Semestar.storyboard in Resources */,
@@ -796,6 +814,7 @@
 				2628BB07203B6E3E00B2106E /* AttendancesController.swift in Sources */,
 				26D73F8D20211BA600C54F94 /* AverageGradesController.swift in Sources */,
 				262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */,
+				260325B1204F40AB002A9481 /* MenuTableViewCell.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
 				26D53EB8204E0B3C00B920E9 /* SemesterDetailController.swift in Sources */,
@@ -815,6 +834,7 @@
 				2628BB0B203B72FC00B2106E /* AttendanceViewController.swift in Sources */,
 				26E41DC31FE707DA00FD4A7C /* ChooseLanguageViewController.swift in Sources */,
 				2624F4AF200FEA5700CE1DCF /* NewsViewController.swift in Sources */,
+				260325AF204F4063002A9481 /* MenuViewController.swift in Sources */,
 				265E33D42007D5720033B393 /* ApiClient.swift in Sources */,
 				2628AE671FE9AE5200A6C37A /* StringExtension.swift in Sources */,
 				262E6239204C696800ECBC29 /* AnnouncmentViewController.swift in Sources */,
