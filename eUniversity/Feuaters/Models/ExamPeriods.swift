@@ -8,6 +8,14 @@
 
 import UIKit
 
-class ExamPeriods: NSObject {
+struct ExamPeriodsValue: Decodable {
+    var  value  : ExamPeriods
+}
 
+struct  ExamPeriods : Decodable {
+   var ExamPeriods:[Exam]
+}
+
+struct Exam: Decodable {
+    
 }

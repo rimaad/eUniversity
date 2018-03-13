@@ -8,6 +8,24 @@
 
 import UIKit
 
-class ExamsPeriodController: NSObject {
+protocol  ExamsPeriodControllerDelegate: class {
+    func onSuccess(response: Certificates)
+    func onError(error:NSError)
+}
 
+class ExamsPeriodController: NSObject {
+    weak var delegate : ExamsPeriodControllerDelegate?
+    static let sharedController = ExamsPeriodController()
+    var certificateData  :  Certificates?
+    let apiClient = ApiClient()
+    
+    func getExamPeriods() {
+        apiClient.getExamPeriods() {(response, error) in
+            if response != nil {
+                self.certificateData = response
+                self.delegate?.onSuccess(response: response!)
+            }
+        }
+    }
+    
 }

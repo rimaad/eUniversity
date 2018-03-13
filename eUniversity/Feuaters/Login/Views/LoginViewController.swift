@@ -39,9 +39,13 @@ extension LoginViewController:UserControllerDelegate {
     
     func onSuccess() {
         SVProgressHUD.dismiss()
-        let storyBoard = UIStoryboard(name:"Main", bundle:nil)
-        let filterVC = storyBoard.instantiateViewController(withIdentifier: "tabBar")
-        self.present(filterVC, animated: true, completion: nil)
+       // let storyBoard = UIStoryboard(name:"Main", bundle:nil)
+       // let filterVC = storyBoard.instantiateViewController(withIdentifier: "tabBar")
+       // self.present(filterVC, animated: true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+        navigationController?.pushViewController(vc,animated: true)
     }
     
     func onError(error: eUniversityError){

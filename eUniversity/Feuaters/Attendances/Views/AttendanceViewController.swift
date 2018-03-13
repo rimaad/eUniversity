@@ -59,7 +59,17 @@ class AttendanceViewController: UIViewController,UITableViewDataSource,UITableVi
         super.awakeFromNib()
         
         self.title = "attendances".localized()
-        self.tabBarItem.image = #imageLiteral(resourceName: "exam_dates")
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openDetailsScreen(syllabusId:"\(AttendancesController.sharedController.attendanceData?.Attendance[indexPath.row].SyllabusID ?? 0)")
+    }
+    
+    func openDetailsScreen(syllabusId:String) {
+        let storyboard = UIStoryboard(name: "AttendanceDetail", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "attendanceDetail") as! AttendancesDetailViewController
+        vc.syllabusId = syllabusId
+        navigationController?.pushViewController(vc,animated: true)
     }
     
 }

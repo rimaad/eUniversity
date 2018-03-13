@@ -17,6 +17,8 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
+        //ExamsPeriodController.sharedController.getExamPeriods()
+        PaymentsController.sharedController.getPayment()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,8 +54,7 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellReuseIdentifier = "menuCell"
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? MenuTableViewCell
-                    cell?.titleLabel.text = "Title"
-                    cell?.ImageView.image = #imageLiteral(resourceName: "default")
+        cell?.populateCell(indexPath:indexPath.row)
                 return cell!
             }
 
@@ -66,10 +67,49 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            openAttendences()
+        case 1:
+        print("payments")
+        case 2:
+            print("exams")
+        case 3:
+            openCertificates()
+        case 4:
+            logOut()
+        default:
+            break
+        }
+    }
+    
+    func openCertificates() {
+        
+        let storyboard = UIStoryboard(name: "Certificate", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "certificateView") as! CertificatesViewController
+        navigationController?.pushViewController(vc,animated: true)
+    }
+    
+    func openAttendences() {
+       // let storyBoard = UIStoryboard(name:"Main", bundle:nil)
+        //let filterVC = storyBoard.instantiateViewController(withIdentifier: "attendanceController")
+        //self.present(filterVC, animated: true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "attendanceController") as! AttendanceViewController
+        navigationController?.pushViewController(vc,animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 70
+    }
+    
+    func logOut() {
+       navigationController?.popToRootViewController(animated: true)
     }
 }

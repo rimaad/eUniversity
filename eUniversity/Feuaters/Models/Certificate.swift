@@ -8,6 +8,27 @@
 
 import UIKit
 
-class Certificate: NSObject {
-
-}
+    struct CertificateValue: Decodable {
+        var value : Certificates
+    }
+    
+    struct Certificates: Decodable {
+        
+        var Certificates : [Certificate]
+    }
+    
+    struct Certificate:Decodable {
+        var AcademicYear :String?
+        var Active:Int?
+        var Answer:String?
+        var CertificateID:Int?
+        var CertificatePurpose:String?
+        var CertificatePurposeID:Int?
+        var CertificateType:String?
+        var CertificateTypeID:Int?
+        var CreatedDate:String?
+        var Issued:Int?
+        var IssuedDate:String?
+        var Note:String?
+        var StudentID:Int?        
+    }

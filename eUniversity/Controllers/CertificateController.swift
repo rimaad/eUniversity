@@ -8,6 +8,22 @@
 
 import UIKit
 
-class CertificateController: NSObject {
+protocol  CertificatesControllerDelegate: class {
+    func onSuccess(response: Certificates)
+    func onError(error:NSError)
+}
 
+class CertificateController: NSObject {
+    weak var delegate : CertificatesControllerDelegate?
+    static let sharedController = CertificateController()
+    var certificateData  :  Certificates?
+    let apiClient = ApiClient()
+    func getCertificates(){
+        apiClient.getCertificates(){(response, error) in
+            if response != nil {
+                self.certificateData = response
+                self.delegate?.onSuccess(response: response!)
+            }
+        }
+    }
 }

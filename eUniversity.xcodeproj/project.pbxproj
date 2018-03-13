@@ -10,6 +10,23 @@
 		260325AC204F3EA6002A9481 /* profile_pic_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 260325AB204F3EA5002A9481 /* profile_pic_default.png */; };
 		260325AF204F4063002A9481 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325AE204F4063002A9481 /* MenuViewController.swift */; };
 		260325B1204F40AB002A9481 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325B0204F40AB002A9481 /* MenuTableViewCell.swift */; };
+		260325B32051F379002A9481 /* AnnouncmentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325B22051F379002A9481 /* AnnouncmentsController.swift */; };
+		260325B52051F4A5002A9481 /* CertificateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325B42051F4A5002A9481 /* CertificateController.swift */; };
+		260325B72051F72B002A9481 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325B62051F72B002A9481 /* Certificate.swift */; };
+		260325BB2055CD7E002A9481 /* ic_donut_large_36pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 260325B82055CD7D002A9481 /* ic_donut_large_36pt.png */; };
+		260325BC2055CD7E002A9481 /* ic_donut_large_36pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260325B92055CD7D002A9481 /* ic_donut_large_36pt_2x.png */; };
+		260325BD2055CD7E002A9481 /* ic_donut_large_36pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260325BA2055CD7E002A9481 /* ic_donut_large_36pt_3x.png */; };
+		260325C02055D589002A9481 /* CertificatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325BF2055D589002A9481 /* CertificatesViewController.swift */; };
+		260325C22055D5A0002A9481 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325C12055D5A0002A9481 /* CertificateTableViewCell.swift */; };
+		260325C42055D627002A9481 /* Certificate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260325C32055D627002A9481 /* Certificate.storyboard */; };
+		260325C620572F28002A9481 /* AttendanceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325C520572F28002A9481 /* AttendanceDetail.swift */; };
+		260325C9205731B3002A9481 /* AttendanceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325C8205731B3002A9481 /* AttendanceDetailController.swift */; };
+		260325CB205732BA002A9481 /* AttendanceDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260325CA205732BA002A9481 /* AttendanceDetail.storyboard */; };
+		260325CD20573312002A9481 /* AttendancesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325CC20573312002A9481 /* AttendancesDetailViewController.swift */; };
+		260325CF205854E6002A9481 /* ExamsPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325CE205854E6002A9481 /* ExamsPeriodController.swift */; };
+		260325D120586F20002A9481 /* ExamPeriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325D020586F20002A9481 /* ExamPeriods.swift */; };
+		260325D320587FF3002A9481 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325D220587FF3002A9481 /* PaymentsController.swift */; };
+		260325D520588106002A9481 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260325D420588106002A9481 /* Payments.swift */; };
 		2624F4A7200D40F300CE1DCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4A6200D40F300CE1DCF /* User.swift */; };
 		2624F4AA200E797100CE1DCF /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4A9200E797100CE1DCF /* UserController.swift */; };
 		2624F4AF200FEA5700CE1DCF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624F4AE200FEA5700CE1DCF /* NewsViewController.swift */; };
@@ -90,6 +107,23 @@
 		260325AB204F3EA5002A9481 /* profile_pic_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_pic_default.png; sourceTree = "<group>"; };
 		260325AE204F4063002A9481 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		260325B0204F40AB002A9481 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		260325B22051F379002A9481 /* AnnouncmentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncmentsController.swift; sourceTree = "<group>"; };
+		260325B42051F4A5002A9481 /* CertificateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateController.swift; sourceTree = "<group>"; };
+		260325B62051F72B002A9481 /* Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificate.swift; sourceTree = "<group>"; };
+		260325B82055CD7D002A9481 /* ic_donut_large_36pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_donut_large_36pt.png; sourceTree = "<group>"; };
+		260325B92055CD7D002A9481 /* ic_donut_large_36pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_donut_large_36pt_2x.png; sourceTree = "<group>"; };
+		260325BA2055CD7E002A9481 /* ic_donut_large_36pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_donut_large_36pt_3x.png; sourceTree = "<group>"; };
+		260325BF2055D589002A9481 /* CertificatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesViewController.swift; sourceTree = "<group>"; };
+		260325C12055D5A0002A9481 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
+		260325C32055D627002A9481 /* Certificate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Certificate.storyboard; sourceTree = "<group>"; };
+		260325C520572F28002A9481 /* AttendanceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceDetail.swift; sourceTree = "<group>"; };
+		260325C8205731B3002A9481 /* AttendanceDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceDetailController.swift; sourceTree = "<group>"; };
+		260325CA205732BA002A9481 /* AttendanceDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AttendanceDetail.storyboard; sourceTree = "<group>"; };
+		260325CC20573312002A9481 /* AttendancesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendancesDetailViewController.swift; sourceTree = "<group>"; };
+		260325CE205854E6002A9481 /* ExamsPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsPeriodController.swift; sourceTree = "<group>"; };
+		260325D020586F20002A9481 /* ExamPeriods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPeriods.swift; sourceTree = "<group>"; };
+		260325D220587FF3002A9481 /* PaymentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsController.swift; sourceTree = "<group>"; };
+		260325D420588106002A9481 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
 		2624F4A6200D40F300CE1DCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2624F4A9200E797100CE1DCF /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		2624F4AE200FEA5700CE1DCF /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +236,16 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		260325BE2055D568002A9481 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				260325BF2055D589002A9481 /* CertificatesViewController.swift */,
+				260325C12055D5A0002A9481 /* CertificateTableViewCell.swift */,
+				260325C32055D627002A9481 /* Certificate.storyboard */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
 		2624F4A8200E795500CE1DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +258,11 @@
 				26EA05AF202D09A300CE1D24 /* SemesterController.swift */,
 				2628BB06203B6E3E00B2106E /* AttendancesController.swift */,
 				26D53EB7204E0B3C00B920E9 /* SemesterDetailController.swift */,
+				260325B22051F379002A9481 /* AnnouncmentsController.swift */,
+				260325B42051F4A5002A9481 /* CertificateController.swift */,
+				260325C8205731B3002A9481 /* AttendanceDetailController.swift */,
+				260325CE205854E6002A9481 /* ExamsPeriodController.swift */,
+				260325D220587FF3002A9481 /* PaymentsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +306,10 @@
 				26EA05B1202D0A0D00CE1D24 /* Semestar.swift */,
 				2628BB02203B6DE500B2106E /* Attendance.swift */,
 				26D53EB5204DF84000B920E9 /* SemestarDetail.swift */,
+				260325B62051F72B002A9481 /* Certificate.swift */,
+				260325C520572F28002A9481 /* AttendanceDetail.swift */,
+				260325D020586F20002A9481 /* ExamPeriods.swift */,
+				260325D420588106002A9481 /* Payments.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +327,8 @@
 			children = (
 				2628BB0A203B72FC00B2106E /* AttendanceViewController.swift */,
 				2628BB0C203B731300B2106E /* AttendanceTableViewCell.swift */,
+				260325CA205732BA002A9481 /* AttendanceDetail.storyboard */,
+				260325CC20573312002A9481 /* AttendancesDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +437,9 @@
 				26689EA91FD88D750081FA12 /* SecondViewController.swift */,
 				2628AE801FEEE0D100A6C37A /* Main.storyboard */,
 				26689EAE1FD88D750081FA12 /* Assets.xcassets */,
+				260325B92055CD7D002A9481 /* ic_donut_large_36pt_2x.png */,
+				260325BA2055CD7E002A9481 /* ic_donut_large_36pt_3x.png */,
+				260325B82055CD7D002A9481 /* ic_donut_large_36pt.png */,
 				260325AB204F3EA5002A9481 /* profile_pic_default.png */,
 				26689EB01FD88D750081FA12 /* LaunchScreen.storyboard */,
 				26689EB31FD88D750081FA12 /* Info.plist */,
@@ -428,6 +486,7 @@
 		26E41DC01FE707A000FD4A7C /* Feuaters */ = {
 			isa = PBXGroup;
 			children = (
+				260325BE2055D568002A9481 /* Certificates */,
 				260325AD204F4042002A9481 /* Menu */,
 				262E6236204C68C400ECBC29 /* Announcements */,
 				2628BB04203B6E0800B2106E /* Attendances */,
@@ -617,9 +676,14 @@
 				26689EAF1FD88D750081FA12 /* Assets.xcassets in Resources */,
 				260325AC204F3EA6002A9481 /* profile_pic_default.png in Resources */,
 				26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */,
+				260325BD2055CD7E002A9481 /* ic_donut_large_36pt_3x.png in Resources */,
 				26E41DC41FE8640C00FD4A7C /* Language.storyboard in Resources */,
+				260325C42055D627002A9481 /* Certificate.storyboard in Resources */,
 				26D53EB0204DD6CE00B920E9 /* Semestar.storyboard in Resources */,
+				260325CB205732BA002A9481 /* AttendanceDetail.storyboard in Resources */,
 				265E33CB20068A890033B393 /* GoogleService-Info.plist in Resources */,
+				260325BC2055CD7E002A9481 /* ic_donut_large_36pt_2x.png in Resources */,
+				260325BB2055CD7E002A9481 /* ic_donut_large_36pt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +868,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260325C02055D589002A9481 /* CertificatesViewController.swift in Sources */,
 				2628BB03203B6DE500B2106E /* Attendance.swift in Sources */,
 				269598F3201D406D006641EB /* Grades.swift in Sources */,
 				2624F4B3200FEF4A00CE1DCF /* NewsController.swift in Sources */,
@@ -815,12 +880,18 @@
 				26D73F8D20211BA600C54F94 /* AverageGradesController.swift in Sources */,
 				262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */,
 				260325B1204F40AB002A9481 /* MenuTableViewCell.swift in Sources */,
+				260325CD20573312002A9481 /* AttendancesDetailViewController.swift in Sources */,
+				260325D120586F20002A9481 /* ExamPeriods.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
 				26D53EB8204E0B3C00B920E9 /* SemesterDetailController.swift in Sources */,
 				26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */,
+				260325D520588106002A9481 /* Payments.swift in Sources */,
+				260325B72051F72B002A9481 /* Certificate.swift in Sources */,
 				2640776F2012363A000D6073 /* News.swift in Sources */,
 				26EA05AE202D068400CE1D24 /* SemesterTableViewCell.swift in Sources */,
+				260325B52051F4A5002A9481 /* CertificateController.swift in Sources */,
+				260325D320587FF3002A9481 /* PaymentsController.swift in Sources */,
 				262A29C02013E8B8004C0F7F /* StatusDataViewController.swift in Sources */,
 				2628BB0D203B731300B2106E /* AttendanceTableViewCell.swift in Sources */,
 				2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */,
@@ -838,12 +909,17 @@
 				265E33D42007D5720033B393 /* ApiClient.swift in Sources */,
 				2628AE671FE9AE5200A6C37A /* StringExtension.swift in Sources */,
 				262E6239204C696800ECBC29 /* AnnouncmentViewController.swift in Sources */,
+				260325CF205854E6002A9481 /* ExamsPeriodController.swift in Sources */,
 				2624F4A7200D40F300CE1DCF /* User.swift in Sources */,
+				260325C22055D5A0002A9481 /* CertificateTableViewCell.swift in Sources */,
 				2628AE6A1FEEA58000A6C37A /* Language.swift in Sources */,
+				260325C9205731B3002A9481 /* AttendanceDetailController.swift in Sources */,
 				26689EA61FD88D750081FA12 /* AppDelegate.swift in Sources */,
+				260325B32051F379002A9481 /* AnnouncmentsController.swift in Sources */,
 				26D53EB6204DF84000B920E9 /* SemestarDetail.swift in Sources */,
 				26D53EB2204DE1C200B920E9 /* SemesterDetailViewController.swift in Sources */,
 				26689EA81FD88D750081FA12 /* FirstViewController.swift in Sources */,
+				260325C620572F28002A9481 /* AttendanceDetail.swift in Sources */,
 				26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */,
 				262A29C92014C921004C0F7F /* StudentData.swift in Sources */,
 				26D73F8F20211EFF00C54F94 /* AverageGrade.swift in Sources */,
