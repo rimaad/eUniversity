@@ -17,8 +17,7 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
-        //ExamsPeriodController.sharedController.getExamPeriods()
-        PaymentsController.sharedController.getPayment()
+        ExamsPeriodController.sharedController.getExamPeriods()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,7 +75,7 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
         case 0:
             openAttendences()
         case 1:
-        print("payments")
+            openPayments()
         case 2:
             print("exams")
         case 3:
@@ -96,12 +95,18 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func openAttendences() {
-       // let storyBoard = UIStoryboard(name:"Main", bundle:nil)
-        //let filterVC = storyBoard.instantiateViewController(withIdentifier: "attendanceController")
-        //self.present(filterVC, animated: true, completion: nil)
+
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "attendanceController") as! AttendanceViewController
+        navigationController?.pushViewController(vc,animated: true)
+    }
+    
+    func openPayments() {
+
+        
+        let storyboard = UIStoryboard(name: "Payments", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "paymentView") as! PaymentsViewController
         navigationController?.pushViewController(vc,animated: true)
     }
     

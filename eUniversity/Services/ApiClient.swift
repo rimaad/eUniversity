@@ -543,10 +543,22 @@ class ApiClient {
         }
     }
     
-    func getPayments(onResponse:@escaping (_ success:Certificates?, _ error:NSError?)->Void) {
+    func getPayments(byAcademicYear:Bool,yearId:String,onResponse:@escaping (_ success:Payments?, _ error:NSError?)->Void) {
+        var urlString = String()
         
-        let urlString = "https://api.euniversity.ba/api/students/payments/get"
+
+        
+        if byAcademicYear {
+            urlString = "https://api.euniversity.ba/api/students/payments/get/?academicYearId=" + yearId
+            
+        } else {
+             urlString = "https://api.euniversity.ba/api/students/payments/get"
+            
+        }
+        
+        
         let url = URL(string:urlString)
+        
         
         guard let accessToken = UserController.sharedController.accessToken else {
             return
@@ -564,8 +576,43 @@ class ApiClient {
                     guard let responseData  = response.data  else {
                         return }
                     do {
-                        let attendancesDetailData = try JSONDecoder().decode(CertificateValue.self, from: responseData)
-                        onResponse(attendancesDetailData.value,nil)
+                        let paymentsData = try JSONDecoder().decode(PaymentsValue.self, from: responseData)
+                        onResponse(paymentsData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+    }
+    
+    func getAcademicYears(onResponse:@escaping (_ success:AcademicYears?, _ error:NSError?)->Void) {
+          let   urlString = "https://api.euniversity.ba/api/students/academicyears/get"
+          let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let academicYearsData = try JSONDecoder().decode(AcademicYearValues.self, from: responseData)
+                        onResponse(academicYearsData.value,nil)
                     }
                     catch let jsnError{
                         print("jsonError",jsnError)

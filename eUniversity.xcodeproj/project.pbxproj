@@ -45,6 +45,11 @@
 		262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */; };
 		262A29C92014C921004C0F7F /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A29C82014C921004C0F7F /* StudentData.swift */; };
 		262E6239204C696800ECBC29 /* AnnouncmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E6238204C696800ECBC29 /* AnnouncmentViewController.swift */; };
+		26318C8F2059D5C00026448C /* Payments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26318C8E2059D5C00026448C /* Payments.storyboard */; };
+		26318C912059DB6A0026448C /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C902059DB6A0026448C /* PaymentsViewController.swift */; };
+		26318C932059DB810026448C /* PaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C922059DB810026448C /* PaymentsTableViewCell.swift */; };
+		26318C95205B14C40026448C /* AcademicYearsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C94205B14C40026448C /* AcademicYearsController.swift */; };
+		26318C97205B153B0026448C /* AcademicYears.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C96205B153B0026448C /* AcademicYears.swift */; };
 		2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1A8202A637800AC7148 /* DoubleExtension.swift */; };
 		2632B1AC202BA4F400AC7148 /* eUniversityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1AB202BA4F400AC7148 /* eUniversityError.swift */; };
 		2640776F2012363A000D6073 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640776E2012363A000D6073 /* News.swift */; };
@@ -143,6 +148,11 @@
 		262A29C62014C63F004C0F7F /* StatusDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDataTableViewCell.swift; sourceTree = "<group>"; };
 		262A29C82014C921004C0F7F /* StudentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
 		262E6238204C696800ECBC29 /* AnnouncmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncmentViewController.swift; sourceTree = "<group>"; };
+		26318C8E2059D5C00026448C /* Payments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payments.storyboard; sourceTree = "<group>"; };
+		26318C902059DB6A0026448C /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		26318C922059DB810026448C /* PaymentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewCell.swift; sourceTree = "<group>"; };
+		26318C94205B14C40026448C /* AcademicYearsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicYearsController.swift; sourceTree = "<group>"; };
+		26318C96205B153B0026448C /* AcademicYears.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicYears.swift; sourceTree = "<group>"; };
 		2632B1A8202A637800AC7148 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2632B1AB202BA4F400AC7148 /* eUniversityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUniversityError.swift; sourceTree = "<group>"; };
 		2640776E2012363A000D6073 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -263,6 +273,7 @@
 				260325C8205731B3002A9481 /* AttendanceDetailController.swift */,
 				260325CE205854E6002A9481 /* ExamsPeriodController.swift */,
 				260325D220587FF3002A9481 /* PaymentsController.swift */,
+				26318C94205B14C40026448C /* AcademicYearsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +321,7 @@
 				260325C520572F28002A9481 /* AttendanceDetail.swift */,
 				260325D020586F20002A9481 /* ExamPeriods.swift */,
 				260325D420588106002A9481 /* Payments.swift */,
+				26318C96205B153B0026448C /* AcademicYears.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -365,6 +377,16 @@
 				262E6238204C696800ECBC29 /* AnnouncmentViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		26318C8D2059D59C0026448C /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				26318C8E2059D5C00026448C /* Payments.storyboard */,
+				26318C902059DB6A0026448C /* PaymentsViewController.swift */,
+				26318C922059DB810026448C /* PaymentsTableViewCell.swift */,
+			);
+			path = Payments;
 			sourceTree = "<group>";
 		};
 		2632B1AA202BA4CB00AC7148 /* ErrorHandler */ = {
@@ -486,6 +508,7 @@
 		26E41DC01FE707A000FD4A7C /* Feuaters */ = {
 			isa = PBXGroup;
 			children = (
+				26318C8D2059D59C0026448C /* Payments */,
 				260325BE2055D568002A9481 /* Certificates */,
 				260325AD204F4042002A9481 /* Menu */,
 				262E6236204C68C400ECBC29 /* Announcements */,
@@ -679,6 +702,7 @@
 				260325BD2055CD7E002A9481 /* ic_donut_large_36pt_3x.png in Resources */,
 				26E41DC41FE8640C00FD4A7C /* Language.storyboard in Resources */,
 				260325C42055D627002A9481 /* Certificate.storyboard in Resources */,
+				26318C8F2059D5C00026448C /* Payments.storyboard in Resources */,
 				26D53EB0204DD6CE00B920E9 /* Semestar.storyboard in Resources */,
 				260325CB205732BA002A9481 /* AttendanceDetail.storyboard in Resources */,
 				265E33CB20068A890033B393 /* GoogleService-Info.plist in Resources */,
@@ -874,6 +898,7 @@
 				2624F4B3200FEF4A00CE1DCF /* NewsController.swift in Sources */,
 				265E33D12007C7740033B393 /* LoginViewController.swift in Sources */,
 				269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */,
+				26318C912059DB6A0026448C /* PaymentsViewController.swift in Sources */,
 				262A29C42014BF78004C0F7F /* StudentDataController.swift in Sources */,
 				26D53EB4204DE3C100B920E9 /* SemesterDetailTableViewCell.swift in Sources */,
 				2628BB07203B6E3E00B2106E /* AttendancesController.swift in Sources */,
@@ -895,6 +920,7 @@
 				262A29C02013E8B8004C0F7F /* StatusDataViewController.swift in Sources */,
 				2628BB0D203B731300B2106E /* AttendanceTableViewCell.swift in Sources */,
 				2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */,
+				26318C932059DB810026448C /* PaymentsTableViewCell.swift in Sources */,
 				2624F4AA200E797100CE1DCF /* UserController.swift in Sources */,
 				26EA05AC202D01BF00CE1D24 /* SemesterViewController.swift in Sources */,
 				269598F1201D4059006641EB /* GradesController.swift in Sources */,
@@ -912,6 +938,7 @@
 				260325CF205854E6002A9481 /* ExamsPeriodController.swift in Sources */,
 				2624F4A7200D40F300CE1DCF /* User.swift in Sources */,
 				260325C22055D5A0002A9481 /* CertificateTableViewCell.swift in Sources */,
+				26318C95205B14C40026448C /* AcademicYearsController.swift in Sources */,
 				2628AE6A1FEEA58000A6C37A /* Language.swift in Sources */,
 				260325C9205731B3002A9481 /* AttendanceDetailController.swift in Sources */,
 				26689EA61FD88D750081FA12 /* AppDelegate.swift in Sources */,
@@ -922,6 +949,7 @@
 				260325C620572F28002A9481 /* AttendanceDetail.swift in Sources */,
 				26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */,
 				262A29C92014C921004C0F7F /* StudentData.swift in Sources */,
+				26318C97205B153B0026448C /* AcademicYears.swift in Sources */,
 				26D73F8F20211EFF00C54F94 /* AverageGrade.swift in Sources */,
 				26EA05B0202D09A300CE1D24 /* SemesterController.swift in Sources */,
 			);
