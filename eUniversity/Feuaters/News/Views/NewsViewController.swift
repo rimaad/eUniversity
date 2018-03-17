@@ -17,11 +17,13 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         NewsController.sharedController.getNews()
         self.tabBarItem.image = #imageLiteral(resourceName: "home")
         self.tabBarItem.title = "news".localized()
+        
 
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.hidesBackButton = true
+        self.tabBarController?.navigationItem.title  = "news".localized()
     }
 
     override func didReceiveMemoryWarning() {

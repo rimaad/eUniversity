@@ -14,14 +14,15 @@ class CertificatesViewController: UIViewController,UITableViewDelegate,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavItems()
-
+        navigationItem.title = "certificate".localized()
         // Do any additional setup after loading the view.
     }
+    
     
     func setUpNavItems() {
         // Additional bar button items
         let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(GradesViewController.filterPressed))
-        let button2 = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(GradesViewController.filterSuccesPressed))
+        let button2 = UIBarButtonItem(image:, style: .plain, target: self, action: #selector(GradesViewController.filterSuccesPressed))
         navigationItem.setRightBarButtonItems([button1, button2], animated: true)
     }
 

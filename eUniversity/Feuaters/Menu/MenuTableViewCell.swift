@@ -32,7 +32,7 @@ class MenuTableViewCell: UITableViewCell {
             titleLabel.text = "certificates".localized()
             CertificateController.sharedController.getCertificates()
         case 4:
-            titleLabel.text = "Logout".localized()
+            titleLabel.text = "logout".localized()
             ImageView.image = #imageLiteral(resourceName: "default")
         default:
             break

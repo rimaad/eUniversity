@@ -29,3 +29,8 @@
 "VerifiedDate" = "Verified date :";
 "StudyType" =  "Study type";
 "StudentStatus" = "Student status";
+"exam_terms" = "Exam terms";
+"certificate" = "Certificate";
+"logout" = "Logout";
+"payments"= "Payments";
+"menu" = "Menu";

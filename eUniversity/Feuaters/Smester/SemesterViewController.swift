@@ -20,6 +20,7 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.title = "semester".localized()
         SemesterController.sharedController.getSemesters()
         SemesterController.sharedController.delegate = self
         // Do any additional setup after loading the view.

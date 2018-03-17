@@ -19,6 +19,11 @@ class AttendanceViewController: UIViewController,UITableViewDataSource,UITableVi
         AttendancesController.sharedController.getAttendances()
         AttendancesController.sharedController.delegate = self
         // Do any additional setup after loading the view.
+        self.tabBarController?.navigationItem.title  = "attendance".localized()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "attendances".localized()
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,6 +22,7 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavItems()
+         self.tabBarController?.navigationItem.title = "menu".localized()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

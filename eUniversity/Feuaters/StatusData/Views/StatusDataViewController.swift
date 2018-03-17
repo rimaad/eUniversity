@@ -18,7 +18,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         StudentDataController.sharedController.delegate = self
         StudentDataController.sharedController.getStudentData()
         AverageGradesController.sharedController.getAvarageGrades()
-        
+        self.tabBarController?.navigationItem.title = "statusData".localized()
         // Do any additional setup after loading the view.
     }
 

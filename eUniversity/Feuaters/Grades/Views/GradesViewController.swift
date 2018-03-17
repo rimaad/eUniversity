@@ -39,6 +39,7 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavItems()
+        self.tabBarController?.navigationItem.title = "grades".localized()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

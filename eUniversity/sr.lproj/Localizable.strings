@@ -26,3 +26,8 @@
 "VerifiedDate" = "Datum ovjere :";
 "StudyType" =  "Način studiranja";
 "StudentStatus" = "Status studenta";
+"exam_terms" = "Ispitni termini";
+"certificates" = "Potvrde";
+"logout" = "Odjava";
+"payments"= "Uplate";
+"menu" = "Meni";
