@@ -17,6 +17,7 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
+        AcademicYearsController.sharedController.getAcademicYears()
         ExamsPeriodController.sharedController.getExamPeriods()
     }
     

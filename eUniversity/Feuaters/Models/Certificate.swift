@@ -32,3 +32,34 @@ import UIKit
         var Note:String?
         var StudentID:Int?        
     }
+
+
+struct CertifcatePurposeValue : Decodable {
+     var value : CertificatePurposes
+}
+
+struct  CertificatePurposes : Decodable {
+    var CertificatePurposes : [CertificatePurpose]
+}
+
+struct  CertificatePurpose:Decodable {
+    var CertificatePurposeID : Int?
+    var Name: String?
+}
+
+
+struct CertifcateTypesValue : Decodable {
+    var value : CertificateTypes
+}
+
+struct  CertificateTypes : Decodable {
+    var CertificateTypes : [CertificateType]
+}
+
+struct  CertificateType:Decodable {
+    var CertificateTypeID : Int?
+    var Name: String?
+}
+
+
+

@@ -14,7 +14,6 @@ class PaymentsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavItems()
-        AcademicYearsController.sharedController.getAcademicYears()
         PaymentsController.sharedController.getPayment(academicYear: false, academicYearId:"")
         PaymentsController.sharedController.delegate = self
         // Do any additional setup after loading the view.

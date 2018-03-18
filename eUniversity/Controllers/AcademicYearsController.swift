@@ -17,9 +17,7 @@ class AcademicYearsController: NSObject {
         apiClient.getAcademicYears() {(response, error) in
             if response != nil {
                 self.academicYearsData = response
-               
         }
     }
-    
-}
+  }
 }

@@ -430,12 +430,17 @@ class ApiClient {
         
     }
     
-    func getCertificates(onResponse:@escaping (_ success:Certificates?, _ error:NSError?)->Void) {
+    func getCertificates(byAcademicYear:Bool,academicYearId:String,onResponse:@escaping (_ success:Certificates?, _ error:NSError?)->Void) {
+        var urlString : String?
         
-        
-        let urlString = "http://api.euniversity.ba/api/students/certificates/get"
-        let url = URL(string:urlString)
-        
+        if byAcademicYear {
+            
+            urlString = "https://api.euniversity.ba/api/students/certificates/get/?academicYearId=" + academicYearId
+         } else {
+            urlString = "https://api.euniversity.ba/api/students/certificates/get"
+            
+        }
+        let url = URL(string:urlString ?? "")
         guard let accessToken = UserController.sharedController.accessToken else {
             return
         }
@@ -623,6 +628,119 @@ class ApiClient {
                 }
             }
             
+        }
+    }
+    
+    func getCertificatesPurpose(onResponse:@escaping (_ success:CertificatePurposes?, _ error:NSError?)->Void) {
+        let   urlString = "https://api.euniversity.ba/api/students/certificatepurposes/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let certificatePurposeData = try JSONDecoder().decode(CertifcatePurposeValue.self, from: responseData)
+                        onResponse(certificatePurposeData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+    }
+    
+    func getCertificatesType(onResponse:@escaping (_ success:CertificateTypes?, _ error:NSError?)->Void) {
+        let   urlString = "https://api.euniversity.ba/api/students/certificatetypes/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let certificateTypesData = try JSONDecoder().decode(CertifcateTypesValue.self, from: responseData)
+                        onResponse(certificateTypesData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+    }
+    
+    func createCertificate(purposeID:Int,typeID:Int,note:String,onResponse:@escaping (_ success:Certificate?, _ error:eUniversityError?)->Void) {
+        let deviceToken = UserDefaults.standard.object(forKey: "fcmToken")
+        let urlString = "https://api.euniversity.ba/api/students/certificates/PostCertificate"
+        guard let url = URL(string:urlString) else {return}
+        let parameters : Parameters = ["StudentID" : "\(UserController.sharedController.StudentID ?? 0)",
+                                       "CertificatePurposeID" : "\(purposeID)",
+            "CertificateTypeID" : "\(typeID)","Note":note]
+        let headers = [
+            "Accept": "application/json",
+            "Content-Type" :"application/json"
+        ]
+        
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers:headers).responseJSON { (response) in
+            print(response)
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 201:
+                    guard let responseData  = response.data  else {
+                        return }
+                    
+                    do {  let certificateData = try JSONDecoder().decode(Certificate.self, from: responseData)
+                        onResponse(certificateData,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    if status == 401 {
+                        do {
+                            let errorData = try JSONDecoder().decode(eUniversityError.self, from:response.data! )
+                            onResponse(nil,errorData)
+                            
+                        }
+                        catch let jsnError{
+                            print("jsonError",jsnError)
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -25,15 +25,17 @@ class MenuTableViewCell: UITableViewCell {
             ImageView.image = #imageLiteral(resourceName: "attendances")
         case 1:
             titleLabel.text = "payments".localized()
-            ImageView.image = #imageLiteral(resourceName: "default")
+            ImageView.image = #imageLiteral(resourceName: "icon_payment")
         case 2:
             titleLabel.text = "exam_terms".localized()
+            ImageView.image = #imageLiteral(resourceName: "icon_exams")
         case 3:
             titleLabel.text = "certificates".localized()
-            CertificateController.sharedController.getCertificates()
+            //CertificateController.sharedController.getCertificates(academicYear:false,academicYearId:"")
+            ImageView.image = #imageLiteral(resourceName: "icon_certificate")
         case 4:
             titleLabel.text = "logout".localized()
-            ImageView.image = #imageLiteral(resourceName: "default")
+            ImageView.image = #imageLiteral(resourceName: "icon_sign_out")
         default:
             break
         }
