@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Models/StudentData.swift"
-            timestampString = "541293660.4435509"
+            timestampString = "543184199.546296"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.65719"
+            timestampString = "543195035.375995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.657286"
+            timestampString = "543195035.376749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Smester/SemesterViewController.swift"
-            timestampString = "542910544.165432"
+            timestampString = "543193608.152867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Smester/SemesterViewController.swift"
-            timestampString = "542910544.1656359"
+            timestampString = "543193608.153008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.560464"
+            timestampString = "543195035.377596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.560524"
+            timestampString = "543195035.3780529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.560578"
+            timestampString = "543195035.3782541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.560629"
+            timestampString = "543195035.378502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.56068"
+            timestampString = "543195035.378647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.560728"
+            timestampString = "543195035.378795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.6574841"
+            timestampString = "543195035.379115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "538"
+            endingLineNumber = "538"
             landmarkName = "getCertificates(byAcademicYear:academicYearId:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Certificates/CertificateTableViewCell.swift"
-            timestampString = "543072564.9352289"
+            timestampString = "543195035.379445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -330,7 +330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Certificates/CertificateTableViewCell.swift"
-            timestampString = "543072564.935266"
+            timestampString = "543195035.3796459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.657585"
+            timestampString = "543195035.379849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "499"
-            endingLineNumber = "499"
+            startingLineNumber = "580"
+            endingLineNumber = "580"
             landmarkName = "getAttendanceDetail(syllabusID:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.6576459"
+            timestampString = "543195035.380066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
+            startingLineNumber = "577"
+            endingLineNumber = "577"
             landmarkName = "getAttendanceDetail(syllabusID:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.657701"
+            timestampString = "543195035.380343"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "533"
-            endingLineNumber = "533"
+            startingLineNumber = "614"
+            endingLineNumber = "614"
             landmarkName = "getExamPeriods(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.657753"
+            timestampString = "543195035.380538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "529"
-            endingLineNumber = "529"
+            startingLineNumber = "610"
+            endingLineNumber = "610"
             landmarkName = "getExamPeriods(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,7 +490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Menu/MenuViewController.swift"
-            timestampString = "542982354.561662"
+            timestampString = "543195035.380766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.657843"
+            timestampString = "543195035.380953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "581"
-            endingLineNumber = "581"
+            startingLineNumber = "662"
+            endingLineNumber = "662"
             landmarkName = "getPayments(byAcademicYear:yearId:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.6579159"
+            timestampString = "543195035.381241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
+            startingLineNumber = "665"
+            endingLineNumber = "665"
             landmarkName = "getPayments(byAcademicYear:yearId:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.657975"
+            timestampString = "543195035.381387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "585"
-            endingLineNumber = "585"
+            startingLineNumber = "666"
+            endingLineNumber = "666"
             landmarkName = "getPayments(byAcademicYear:yearId:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -665,8 +665,8 @@
                   symbolName = "eUniversity.AcademicYearsController.getAcademicYears() -&gt; ()"
                   moduleName = "eUniversity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/eUniversity/eUniversity/Controllers/AcademicYearsController.swift"
-                  timestampString = "543103900.987326"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Controllers/AcademicYearsController.swift"
+                  timestampString = "543194746.922219"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -680,8 +680,8 @@
                   symbolName = "closure #1 (Swift.Optional&lt;eUniversity.AcademicYears&gt;, Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; () in eUniversity.AcademicYearsController.getAcademicYears() -&gt; ()"
                   moduleName = "eUniversity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/eUniversity/eUniversity/Controllers/AcademicYearsController.swift"
-                  timestampString = "543103900.989836"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Controllers/AcademicYearsController.swift"
+                  timestampString = "543194746.9255871"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.658141"
+            timestampString = "543195035.38183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "612"
-            endingLineNumber = "612"
+            startingLineNumber = "693"
+            endingLineNumber = "693"
             landmarkName = "getAcademicYears(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -730,7 +730,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Certificates/CertificatesViewController.swift"
-            timestampString = "543103900.658199"
+            timestampString = "543195035.382038"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -746,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.6582429"
+            timestampString = "543195035.3822351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "436"
-            endingLineNumber = "436"
+            startingLineNumber = "517"
+            endingLineNumber = "517"
             landmarkName = "getCertificates(byAcademicYear:academicYearId:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.658295"
+            timestampString = "543195035.382494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "648"
-            endingLineNumber = "648"
+            startingLineNumber = "729"
+            endingLineNumber = "729"
             landmarkName = "getCertificatesPurpose(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -778,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.658347"
+            timestampString = "543195035.3826441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "658"
-            endingLineNumber = "658"
+            startingLineNumber = "739"
+            endingLineNumber = "739"
             landmarkName = "getCertificatesPurpose(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -794,11 +794,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.658884"
+            timestampString = "543195035.3828059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "684"
-            endingLineNumber = "684"
+            startingLineNumber = "765"
+            endingLineNumber = "765"
             landmarkName = "getCertificatesType(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -810,11 +810,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.658941"
+            timestampString = "543195035.382987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "682"
-            endingLineNumber = "682"
+            startingLineNumber = "763"
+            endingLineNumber = "763"
             landmarkName = "getCertificatesType(onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -826,11 +826,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.658993"
+            timestampString = "543195035.383235"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "720"
-            endingLineNumber = "720"
+            startingLineNumber = "801"
+            endingLineNumber = "801"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -842,11 +842,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.659044"
+            timestampString = "543195035.383412"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "721"
-            endingLineNumber = "721"
+            startingLineNumber = "802"
+            endingLineNumber = "802"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -872,11 +872,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.6591901"
+            timestampString = "543195035.383623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "719"
-            endingLineNumber = "719"
+            startingLineNumber = "800"
+            endingLineNumber = "800"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -888,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.659248"
+            timestampString = "543195035.383814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "716"
-            endingLineNumber = "716"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -904,11 +904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.659301"
+            timestampString = "543195035.383962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "711"
-            endingLineNumber = "711"
+            startingLineNumber = "792"
+            endingLineNumber = "792"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -920,11 +920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.659374"
+            timestampString = "543195035.384102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "707"
-            endingLineNumber = "707"
+            startingLineNumber = "788"
+            endingLineNumber = "788"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -951,8 +951,8 @@
                   symbolName = "eUniversity.PostCertificateController.postCertificate(purposeID: Swift.Int, typeID: Swift.Int, note: Swift.String) -&gt; ()"
                   moduleName = "eUniversity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/eUniversity/eUniversity/Controllers/PostCertificateController.swift"
-                  timestampString = "543103901.0465291"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Controllers/PostCertificateController.swift"
+                  timestampString = "543194747.0037889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -966,8 +966,8 @@
                   symbolName = "closure #1 (Swift.Optional&lt;eUniversity.Certificate&gt;, Swift.Optional&lt;eUniversity.eUniversityError&gt;) -&gt; () in eUniversity.PostCertificateController.postCertificate(purposeID: Swift.Int, typeID: Swift.Int, note: Swift.String) -&gt; ()"
                   moduleName = "eUniversity"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/eUniversity/eUniversity/Controllers/PostCertificateController.swift"
-                  timestampString = "543103901.0482579"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Controllers/PostCertificateController.swift"
+                  timestampString = "543194747.007484"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -984,11 +984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Services/ApiClient.swift"
-            timestampString = "543103900.659518"
+            timestampString = "543195035.3844039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "725"
-            endingLineNumber = "725"
+            startingLineNumber = "806"
+            endingLineNumber = "806"
             landmarkName = "createCertificate(purposeID:typeID:note:onResponse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1016,7 +1016,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Certificates/CertificatesViewController.swift"
-            timestampString = "543103900.659672"
+            timestampString = "543195035.384787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -1032,13 +1032,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eUniversity/Feuaters/Certificates/CertificatesViewController.swift"
-            timestampString = "543103900.659734"
+            timestampString = "543195035.385046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "onSuccess(response:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eUniversity/Controllers/SylabussesController.swift"
+            timestampString = "543195035.385185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getSyllabusses()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eUniversity/Services/ApiClient.swift"
+            timestampString = "543195035.385608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "getSyllabusses(onResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eUniversity/Services/ApiClient.swift"
+            timestampString = "543195035.385962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "getNewsBySyllabus(syllabusID:onResponse:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eUniversity/Controllers/NewsController.swift"
+            timestampString = "543195035.386189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getNewsBySyllabus(SyllabusID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eUniversity/Feuaters/News/Views/NewsDetailViewController.swift"
+            timestampString = "543195035.386547"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eUniversity.NewsDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "eUniversity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Feuaters/News/Views/NewsDetailViewController.swift"
+                  timestampString = "543194747.658488"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "6142">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in eUniversity.NewsDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "eUniversity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Feuaters/News/Views/NewsDetailViewController.swift"
+                  timestampString = "543194747.6643521"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () throws -&gt; Swift.String in implicit closure #1 : @autoclosure () throws -&gt; Swift.String in eUniversity.NewsDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "eUniversity"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damir/Applications/eUniversity/eUniversity/Feuaters/News/Views/NewsDetailViewController.swift"
+                  timestampString = "543194747.6678931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

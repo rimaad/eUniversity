@@ -68,6 +68,18 @@ class CertificatesViewController: UIViewController,UITableViewDelegate,UITableVi
         return 80
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // create the alert
+        let alert = UIAlertController(title: "note".localized(), message:CertificateController.sharedController.certificateData?.Certificates[indexPath.row].Note, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellReuseIdentifier = "certificateCell"
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? CertificateTableViewCell

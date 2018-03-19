@@ -30,4 +30,15 @@ class NewsController: NSObject {
             }
         }
     }
-}
+    
+    func getNewsBySyllabus(SyllabusID:Int) {
+        apiClient.getNewsBySyllabus(syllabusID: SyllabusID) { (response, error) in
+            if response != nil  {
+                self.announcments = response
+                self.delegate?.onSuccess(response:response!)
+            } else if error != nil {
+                self.delegate?.onError()
+            }
+        }
+        }
+    }

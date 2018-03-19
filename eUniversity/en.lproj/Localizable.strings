@@ -31,6 +31,8 @@
 "StudentStatus" = "Student status";
 "exam_terms" = "Exam terms";
 "certificate" = "Certificate";
+"certificates" = "Certificates";
 "logout" = "Logout";
 "payments"= "Payments";
 "menu" = "Menu";
+"note" = "Note";

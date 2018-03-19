@@ -28,6 +28,8 @@
 "StudentStatus" = "Status studenta";
 "exam_terms" = "Ispitni termini";
 "certificates" = "Potvrde";
+"certificate" = "Potvrda";
 "logout" = "Odjava";
 "payments"= "Uplate";
 "menu" = "Meni";
+"note" = "Zabiljeske";

@@ -32,17 +32,18 @@ class CertificateTableViewCell: UITableViewCell {
         createdDate.text = createdDateValue
         issuedDate.text = CertificateController.sharedController.certificateData?.Certificates[indexPath].IssuedDate ?? ""
         subTitleLabel.text = CertificateController.sharedController.certificateData?.Certificates[indexPath].CertificatePurpose
-        certImageView.image = setImage(issued:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Issued)!)
+        certImageView.image = setImage(issued:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Issued)!,active:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Active!)!)
     }
     
-    func setImage(issued:Int) -> UIImage {
-        switch issued {
-        case 0:
-            return #imageLiteral(resourceName: "neodobren_icon")
-        case 1:
-            return #imageLiteral(resourceName: "odobren_icon")
-        default:
-            return #imageLiteral(resourceName: "pending_certificate")
+    func setImage(issued:Int,active:Int) -> UIImage {
+        
+        if active == 1 && issued == 0 {
+             return #imageLiteral(resourceName: "pending_certificate")
+        } else if active == 0 && issued == 1  {
+              return #imageLiteral(resourceName: "odobren_icon")
+        }
+        else {
+           return #imageLiteral(resourceName: "neodobren_icon")
         }
     }
 

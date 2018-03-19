@@ -30,7 +30,9 @@
 "StudyType" =  "Način studiranja";
 "StudentStatus" = "Status studenta";
 "exam_terms" = "Ispitni termini";
+"certificate" = "Potvrda";
 "certificates" = "Potvrde";
 "logout" = "Odjava";
 "payments"= "Uplate";
 "menu" = "Meni";
+"note" = "Zabiljeske";

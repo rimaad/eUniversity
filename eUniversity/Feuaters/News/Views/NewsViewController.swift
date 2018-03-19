@@ -15,8 +15,10 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         NewsController.sharedController.delegate = self
         NewsController.sharedController.getNews()
+        SylabussesController.sharedController.getSyllabusses()
         self.tabBarItem.image = #imageLiteral(resourceName: "home")
         self.tabBarItem.title = "news".localized()
+        setUpNavItems()
         
 
         // Do any additional setup after loading the view.
@@ -53,6 +55,44 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
         }
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openDetailsScreen(indexPath: indexPath.row)
+    }
+    
+    func openDetailsScreen(indexPath:Int) {
+        let storyboard = UIStoryboard(name: "News", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "detailView") as! NewsDetailViewController
+        vc.news = NewsController.sharedController.announcments?.Announcements[indexPath]
+        navigationController?.pushViewController(vc,animated: true)
+    }
+    
+    func setUpNavItems() {
+        // Additional bar button items
+        let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(NewsViewController.showSyllabusActionSheets))
+
+        self.tabBarController?.navigationItem.setRightBarButtonItems([button1], animated: true)
+    }
+    
+    @objc func showSyllabusActionSheets() {
+        createSyllabusActionSheetView()
+    }
+    
+    func createSyllabusActionSheetView() {
+        let myActionSheet =  UIAlertController(title: "Choose syllabus", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        myActionSheet.addAction(UIAlertAction(title: "All syllabusses", style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+            NewsController.sharedController.getNews()
+        }))
+        
+        for syllabus in (SylabussesController.sharedController.syllabussesData?.Syllabuses)! {
+            
+            myActionSheet.addAction(UIAlertAction(title:syllabus.CourseName, style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
+                NewsController.sharedController.getNewsBySyllabus(SyllabusID:syllabus.SyllabusID ?? 0)
+            }))
+        }
+        self.present(myActionSheet, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

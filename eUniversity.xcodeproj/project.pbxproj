@@ -71,6 +71,10 @@
 		269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598EE201D3DD0006641EB /* GradesTableViewCell.swift */; };
 		269598F1201D4059006641EB /* GradesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F0201D4059006641EB /* GradesController.swift */; };
 		269598F3201D406D006641EB /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F2201D406D006641EB /* Grades.swift */; };
+		269D22EB206054670027B725 /* SylabussesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D22EA206054670027B725 /* SylabussesController.swift */; };
+		269D22ED206055D30027B725 /* Syllabus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D22EC206055D30027B725 /* Syllabus.swift */; };
+		269D22EF206069520027B725 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269D22EE206069520027B725 /* News.storyboard */; };
+		269D22F120606BD80027B725 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D22F020606BD80027B725 /* NewsDetailViewController.swift */; };
 		26D53EB0204DD6CE00B920E9 /* Semestar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D53EAF204DD6CE00B920E9 /* Semestar.storyboard */; };
 		26D53EB2204DE1C200B920E9 /* SemesterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D53EB1204DE1C200B920E9 /* SemesterDetailViewController.swift */; };
 		26D53EB4204DE3C100B920E9 /* SemesterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D53EB3204DE3C100B920E9 /* SemesterDetailTableViewCell.swift */; };
@@ -187,6 +191,10 @@
 		269598EE201D3DD0006641EB /* GradesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesTableViewCell.swift; sourceTree = "<group>"; };
 		269598F0201D4059006641EB /* GradesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesController.swift; sourceTree = "<group>"; };
 		269598F2201D406D006641EB /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
+		269D22EA206054670027B725 /* SylabussesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SylabussesController.swift; sourceTree = "<group>"; };
+		269D22EC206055D30027B725 /* Syllabus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllabus.swift; sourceTree = "<group>"; };
+		269D22EE206069520027B725 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		269D22F020606BD80027B725 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		26D53EAF204DD6CE00B920E9 /* Semestar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Semestar.storyboard; sourceTree = "<group>"; };
 		26D53EB1204DE1C200B920E9 /* SemesterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterDetailViewController.swift; sourceTree = "<group>"; };
 		26D53EB3204DE3C100B920E9 /* SemesterDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -280,6 +288,7 @@
 				260325D220587FF3002A9481 /* PaymentsController.swift */,
 				26318C94205B14C40026448C /* AcademicYearsController.swift */,
 				262C1024205EA35700166554 /* PostCertificateController.swift */,
+				269D22EA206054670027B725 /* SylabussesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +306,8 @@
 			children = (
 				2624F4AE200FEA5700CE1DCF /* NewsViewController.swift */,
 				2624F4B0200FEB9800CE1DCF /* NewsTableViewCell.swift */,
+				269D22EE206069520027B725 /* News.storyboard */,
+				269D22F020606BD80027B725 /* NewsDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				260325D020586F20002A9481 /* ExamPeriods.swift */,
 				260325D420588106002A9481 /* Payments.swift */,
 				26318C96205B153B0026448C /* AcademicYears.swift */,
+				269D22EC206055D30027B725 /* Syllabus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -702,6 +714,7 @@
 				26689EB21FD88D750081FA12 /* LaunchScreen.storyboard in Resources */,
 				2628AE821FEEE0D200A6C37A /* Main.storyboard in Resources */,
 				265E33CE2007C6B70033B393 /* Login.storyboard in Resources */,
+				269D22EF206069520027B725 /* News.storyboard in Resources */,
 				26689EAF1FD88D750081FA12 /* Assets.xcassets in Resources */,
 				260325AC204F3EA6002A9481 /* profile_pic_default.png in Resources */,
 				26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */,
@@ -917,6 +930,8 @@
 				260325D120586F20002A9481 /* ExamPeriods.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
+				269D22F120606BD80027B725 /* NewsDetailViewController.swift in Sources */,
+				269D22EB206054670027B725 /* SylabussesController.swift in Sources */,
 				26D53EB8204E0B3C00B920E9 /* SemesterDetailController.swift in Sources */,
 				26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */,
 				260325D520588106002A9481 /* Payments.swift in Sources */,
@@ -953,6 +968,7 @@
 				260325B32051F379002A9481 /* AnnouncmentsController.swift in Sources */,
 				26D53EB6204DF84000B920E9 /* SemestarDetail.swift in Sources */,
 				26D53EB2204DE1C200B920E9 /* SemesterDetailViewController.swift in Sources */,
+				269D22ED206055D30027B725 /* Syllabus.swift in Sources */,
 				26689EA81FD88D750081FA12 /* FirstViewController.swift in Sources */,
 				260325C620572F28002A9481 /* AttendanceDetail.swift in Sources */,
 				26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */,

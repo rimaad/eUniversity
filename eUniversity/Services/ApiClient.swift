@@ -101,6 +101,87 @@ class ApiClient {
         
     }
     
+    func getNewsBySyllabus(syllabusID:Int,onResponse:@escaping (_ success:Announcements?, _ error:NSError?)->Void) {
+        
+        
+        let urlString = "http://api.euniversity.ba/api/students/announcements/get/?syllabusId=" + "\(syllabusID)"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let announcment = try JSONDecoder().decode(ValueNews.self, from: responseData)
+                        print(announcment)
+                        onResponse(announcment.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+        
+    }
+    
+    func getSyllabusses(onResponse:@escaping (_ success:Syllabuses?, _ error:NSError?)->Void) {
+        let urlString = baseUrl + "/students/syllabuses/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let syllabusesData = try JSONDecoder().decode(SyllabusValue.self,from: responseData)
+                        print(syllabusesData)
+                        onResponse(syllabusesData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    if status == 401 {
+                        guard let responseData  = response.data  else {
+                            return }
+                        //
+                        onResponse(nil,nil)
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+    
     func getStudentStatus(onResponse:@escaping (_ success:StudentData?, _ error:NSError?)->Void) {
         
         
