@@ -17,14 +17,15 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.height+100)
-        
+        ImagesController.sharedController.delegate = self
         titleLabelText.text = news?.Title
         textLabel.text = news?.Text
         dateLabel.text = "\(news?.Date ?? "")\(" | ")\(news?.Author ?? "")"
-        
+        ImagesController.sharedController.getAnnouncmentsImages(announcmentID: "\(news?.AnnouncementID ?? 0)")
         if (news?.HasDocuments)! {
             
             downloadButton.isHidden = false
@@ -43,5 +44,19 @@ class NewsDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension NewsDetailViewController:ImagesControllerDelegate {
+    func onSuccess(response:AnnouncementPhotos) {
+        if  response.AnnouncementPhotos.count > 0 {
+       guard let imageNews = response.AnnouncementPhotos[0].PhotoBase64 else {
+        return
+        }
+         imageView.image = ImagesController.sharedController.decodeImage(imageString: imageNews)
+    }
+         }
+    func onError() {
+        
     }
 }

@@ -9,9 +9,16 @@
 import UIKit
 
 struct ValueImage: Decodable {
-    let value : Image
+    let value : AnnouncementPhotos
 }
 
-struct Image:Decodable  {
-    let AnnouncementPhotos : String?
+struct AnnouncementPhotos:Decodable  {
+    let AnnouncementPhotos : [Images]
+}
+
+struct Images : Decodable {
+    var AnnouncementID : Int?
+    var AnnouncementPhotoID: Int?
+    var Name:String?
+    var PhotoBase64:String?
 }

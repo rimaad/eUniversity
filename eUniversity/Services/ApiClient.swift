@@ -227,7 +227,7 @@ class ApiClient {
         }
     }
     
-    func getAnnouncmentsImages(announcmentId:String,onResponse:@escaping (_ success:Image?, _ error:NSError?)->Void) {
+    func getAnnouncmentsImages(announcmentId:String,onResponse:@escaping (_ success:AnnouncementPhotos?, _ error:NSError?)->Void) {
         let urlString = baseUrl + "/students/announcementphotos/GetByAnnouncementId/?announcementId=\(announcmentId)"
         let url = URL(string:urlString)
         

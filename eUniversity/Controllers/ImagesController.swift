@@ -9,7 +9,7 @@
 import UIKit
 
 protocol  ImagesControllerDelegate: class {
-    func onSuccess()
+    func onSuccess(response:AnnouncementPhotos)
     func onError()
 }
 
@@ -23,9 +23,15 @@ class ImagesController: NSObject {
         apiClient.getAnnouncmentsImages(announcmentId:announcmentID) { (response, error) in
             
             if response != nil {
-                //self.studentData = response
-                self.delegate?.onSuccess()
+                self.delegate?.onSuccess(response: response!)
             }
         }
+    }
+    
+    func decodeImage(imageString:String) -> UIImage {
+        let dataDecoded : Data = Data(base64Encoded: imageString, options: .ignoreUnknownCharacters)!
+        let decodedimage = UIImage(data: dataDecoded)
+         return decodedimage!
+        
     }
 }
