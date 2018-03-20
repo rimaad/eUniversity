@@ -9,6 +9,7 @@
 import UIKit
 
 class NewsDetailViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabelText: UILabel!
     var news :News?
     @IBOutlet weak var titleDocument: UILabel!
@@ -22,10 +23,21 @@ class NewsDetailViewController: UIViewController {
         
         titleLabelText.text = news?.Title
         textLabel.text = news?.Text
-        dateLabel.text = news?.Date ?? "" + " \(news?.Author ?? "")"
+        dateLabel.text = "\(news?.Date ?? "")\(" | ")\(news?.Author ?? "")"
+        
+        if (news?.HasDocuments)! {
             
+            downloadButton.isHidden = false
+            titleDocument.text = ""
+        }else {
+            downloadButton.isHidden = true
+        }
 
         // Do any additional setup after loading the view.
+    }
+    
+    func openDocument() {
+        
     }
 
     override func didReceiveMemoryWarning() {

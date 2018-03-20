@@ -27,5 +27,6 @@ struct News : Decodable {
     let SyllabusID : Int?
     let Text : String?
     let Title : String?
+    let HasDocuments : Bool?
 
 }
