@@ -34,49 +34,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaL-FC-Dlv">
-                                <rect key="frame" x="70" y="224" width="235" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-kc-qld">
-                                <rect key="frame" x="70" y="300" width="235" height="30"/>
+                                <rect key="frame" x="70" y="302" width="235" height="40"/>
+                                <color key="backgroundColor" red="0.95120813989999997" green="0.95120813989999997" blue="0.95120813989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sxU-Di-ITi"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsM-Zk-CPB">
-                                <rect key="frame" x="94" y="394" width="187" height="50"/>
+                                <rect key="frame" x="94" y="393" width="187" height="50"/>
                                 <color key="backgroundColor" red="0.27293050289154053" green="0.76095062494277954" blue="0.79410165548324585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UXq-3Q-tZm"/>
                                 </constraints>
-                                <state key="normal" title="Log in ">
+                                <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="IDw-kE-pps" eventType="touchUpInside" id="MZv-tu-VF3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoFinal" translatesAutoresizingMaskIntoConstraints="NO" id="2Hc-1d-0EC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_full" translatesAutoresizingMaskIntoConstraints="NO" id="2Hc-1d-0EC">
                                 <rect key="frame" x="55" y="91" width="265" height="95"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright Breakpoint 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL6-v1-Z4u">
+                                <rect key="frame" x="35" y="636" width="305" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99479166669999997" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaL-FC-Dlv">
+                                <rect key="frame" x="70" y="237" width="235" height="40"/>
+                                <color key="backgroundColor" red="0.95120813992042441" green="0.95120813992042441" blue="0.95120813992042441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="arZ-Yg-hnV"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92538958787918091" green="0.92554813623428345" blue="0.92537957429885864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Erl-kc-qld" firstAttribute="top" secondItem="uaL-FC-Dlv" secondAttribute="bottom" constant="46" id="94d-vD-JN5"/>
                             <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="lsM-Zk-CPB" secondAttribute="trailing" constant="94" id="Dnl-Qb-Lig"/>
-                            <constraint firstItem="Erl-kc-qld" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="70" id="Mpx-sk-o0f"/>
+                            <constraint firstItem="Erl-kc-qld" firstAttribute="leading" secondItem="uaL-FC-Dlv" secondAttribute="leading" id="FnC-Dr-6Ca"/>
+                            <constraint firstItem="OL6-v1-Z4u" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="35" id="II0-YZ-ns4"/>
+                            <constraint firstItem="Erl-kc-qld" firstAttribute="centerX" secondItem="lsM-Zk-CPB" secondAttribute="centerX" id="Kyl-Ax-cFj"/>
+                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="2Hc-1d-0EC" secondAttribute="bottom" constant="51" id="NLL-qY-Bz5"/>
+                            <constraint firstItem="lsM-Zk-CPB" firstAttribute="top" secondItem="Erl-kc-qld" secondAttribute="bottom" constant="51" id="OpC-u4-GtL"/>
+                            <constraint firstItem="Erl-kc-qld" firstAttribute="top" secondItem="uaL-FC-Dlv" secondAttribute="bottom" constant="25" id="RoK-FR-M6f"/>
                             <constraint firstItem="lsM-Zk-CPB" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="94" id="YLM-uP-mkL"/>
-                            <constraint firstItem="lsM-Zk-CPB" firstAttribute="top" secondItem="Erl-kc-qld" secondAttribute="bottom" constant="64" id="du8-nq-lhK"/>
+                            <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="OL6-v1-Z4u" secondAttribute="trailing" constant="35" id="bhL-tO-gU9"/>
+                            <constraint firstItem="jzY-UU-62Y" firstAttribute="bottom" secondItem="OL6-v1-Z4u" secondAttribute="bottom" constant="10" id="eBy-yj-d2U"/>
                             <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="2Hc-1d-0EC" secondAttribute="trailing" constant="55" id="eS4-Xb-yeu"/>
-                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="70" id="eWX-mg-Kft"/>
+                            <constraint firstItem="Erl-kc-qld" firstAttribute="trailing" secondItem="uaL-FC-Dlv" secondAttribute="trailing" id="elY-DJ-Jic"/>
                             <constraint firstItem="2Hc-1d-0EC" firstAttribute="top" secondItem="jzY-UU-62Y" secondAttribute="top" constant="27" id="iW0-4t-HCT"/>
-                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="2Hc-1d-0EC" secondAttribute="bottom" constant="38" id="lfK-6c-dMj"/>
-                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="jzY-UU-62Y" secondAttribute="top" constant="160" id="oNc-iO-Jq3"/>
-                            <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="uaL-FC-Dlv" secondAttribute="trailing" constant="70" id="osf-8f-OBJ"/>
-                            <constraint firstItem="jzY-UU-62Y" firstAttribute="trailing" secondItem="Erl-kc-qld" secondAttribute="trailing" constant="70" id="uMi-IX-Szd"/>
+                            <constraint firstItem="Erl-kc-qld" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="70" id="kbx-o7-dQP"/>
+                            <constraint firstItem="uaL-FC-Dlv" firstAttribute="top" secondItem="zZV-li-3U1" secondAttribute="top" constant="237" id="woh-eT-bv3"/>
                             <constraint firstItem="2Hc-1d-0EC" firstAttribute="leading" secondItem="jzY-UU-62Y" secondAttribute="leading" constant="55" id="yko-dF-xcc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jzY-UU-62Y"/>
@@ -94,6 +111,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logoFinal" width="217" height="42"/>
+        <image name="logo_full" width="187" height="147"/>
     </resources>
 </document>
