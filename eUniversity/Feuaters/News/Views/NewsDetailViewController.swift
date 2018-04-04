@@ -23,7 +23,7 @@ class NewsDetailViewController: UIViewController {
         scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.height+100)
         ImagesController.sharedController.delegate = self
         titleLabelText.text = news?.Title
-        textLabel.text = news?.Text
+        textLabel.text = news?.Text?.html2String
         dateLabel.text = "\(news?.Date ?? "")\(" | ")\(news?.Author ?? "")"
         ImagesController.sharedController.getAnnouncmentsImages(announcmentID: "\(news?.AnnouncementID ?? 0)")
         if (news?.HasDocuments)! {

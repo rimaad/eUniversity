@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    let refreshController = RefreshContol()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +20,21 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         SylabussesController.sharedController.getSyllabusses()
         self.tabBarItem.image = #imageLiteral(resourceName: "home")
         self.tabBarItem.title = "news".localized()
-        setUpNavItems()
-        
+        self.tableView.addSubview(refreshController.refreshControl)
 
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        setUpNavItems()
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(NewsViewController.handleRefresh(_:)),
+                                                   for: UIControlEvents.valueChanged)
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationItem.title  = "news".localized()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        hideNavItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,10 +42,26 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
+    func showBanners(message:String) {
+        let banner = NotificationBanner(title: "Greska", subtitle:message, style: .danger)
+        banner.show()
+       
+    }
+    
+    func hideNavItems() {
+        self.tabBarController?.navigationItem.setRightBarButtonItems(nil, animated: true)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.title = "StudentStatus".localized()
     }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+    
+        NewsController.sharedController.getNews()
+    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let countNum =  NewsController.sharedController.announcments?.Announcements.count {
@@ -104,6 +129,7 @@ extension NewsViewController : NewsControllerDelegate {
      func onSuccess(response: Announcements) {
         print(response)
         self.tableView .reloadData()
+        refreshController.refreshControl.endRefreshing()
     }
     
     func onError() {

@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     @IBAction func loginPressed(_ sender: Any) {
         SVProgressHUD.show()
         if let username = usernameTextField.text, let password = passwordTextField.text {
@@ -49,7 +51,10 @@ extension LoginViewController:UserControllerDelegate {
     }
     
     func onError(error: eUniversityError){
-        SVProgressHUD.showError(withStatus: error.exceptionMessage)
+        let eUniversityerror = eUniversityError()
+        eUniversityerror.showErrorMessage(message:error.exceptionMessage ?? "something_went_wrong".localized())
+        SVProgressHUD.dismiss()
+       
 }
 
 }

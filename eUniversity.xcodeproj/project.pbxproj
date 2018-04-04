@@ -67,6 +67,7 @@
 		26689EBD1FD88D750081FA12 /* eUniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26689EBC1FD88D750081FA12 /* eUniversityTests.swift */; };
 		26689EC81FD88D750081FA12 /* eUniversityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26689EC71FD88D750081FA12 /* eUniversityUITests.swift */; };
 		26770275201A6DD6006D0590 /* StudentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26770274201A6DD6006D0590 /* StudentDataTableViewCell.swift */; };
+		268164A6206FC8B0001E8C77 /* RefreshContol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268164A5206FC8B0001E8C77 /* RefreshContol.swift */; };
 		269598ED201D3DB6006641EB /* GradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598EC201D3DB6006641EB /* GradesViewController.swift */; };
 		269598EF201D3DD0006641EB /* GradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598EE201D3DD0006641EB /* GradesTableViewCell.swift */; };
 		269598F1201D4059006641EB /* GradesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269598F0201D4059006641EB /* GradesController.swift */; };
@@ -187,6 +188,7 @@
 		26689EC71FD88D750081FA12 /* eUniversityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUniversityUITests.swift; sourceTree = "<group>"; };
 		26689EC91FD88D750081FA12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26770274201A6DD6006D0590 /* StudentDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataTableViewCell.swift; sourceTree = "<group>"; };
+		268164A5206FC8B0001E8C77 /* RefreshContol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshContol.swift; sourceTree = "<group>"; };
 		269598EC201D3DB6006641EB /* GradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesViewController.swift; sourceTree = "<group>"; };
 		269598EE201D3DD0006641EB /* GradesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesTableViewCell.swift; sourceTree = "<group>"; };
 		269598F0201D4059006641EB /* GradesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesController.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 		26689EA41FD88D750081FA12 /* eUniversity */ = {
 			isa = PBXGroup;
 			children = (
+				268164A4206FC893001E8C77 /* Components */,
 				2632B1AA202BA4CB00AC7148 /* ErrorHandler */,
 				2624F4A8200E795500CE1DCF /* Controllers */,
 				265E33D22007D5540033B393 /* Services */,
@@ -504,6 +507,14 @@
 				26689EC91FD88D750081FA12 /* Info.plist */,
 			);
 			path = eUniversityUITests;
+			sourceTree = "<group>";
+		};
+		268164A4206FC893001E8C77 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				268164A5206FC8B0001E8C77 /* RefreshContol.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		269598EA201D3D98006641EB /* Grades */ = {
@@ -805,8 +816,11 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -814,8 +828,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,6 +938,7 @@
 				262C1025205EA35700166554 /* PostCertificateController.swift in Sources */,
 				262C1021205E6CDF00166554 /* CreateCertificateViewController.swift in Sources */,
 				262A29C42014BF78004C0F7F /* StudentDataController.swift in Sources */,
+				268164A6206FC8B0001E8C77 /* RefreshContol.swift in Sources */,
 				26D53EB4204DE3C100B920E9 /* SemesterDetailTableViewCell.swift in Sources */,
 				2628BB07203B6E3E00B2106E /* AttendancesController.swift in Sources */,
 				26D73F8D20211BA600C54F94 /* AverageGradesController.swift in Sources */,
@@ -1169,7 +1187,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJ46N4ZVC7;
 				INFOPLIST_FILE = eUniversity/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.eUniversity.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1190,7 +1208,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJ46N4ZVC7;
 				INFOPLIST_FILE = eUniversity/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.eUniversity.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";

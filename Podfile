@@ -10,6 +10,7 @@ target 'eUniversity' do
   pod 'Firebase/Messaging'
   pod 'Alamofire', '~> 4.6'
   pod 'SVProgressHUD'
+  pod 'NotificationBannerSwift'
 
   target 'eUniversityTests' do
     inherit! :search_paths

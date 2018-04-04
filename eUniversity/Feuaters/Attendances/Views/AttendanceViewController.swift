@@ -11,7 +11,7 @@ import UIKit
 class AttendanceViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
 
-    
+    let refreshController = RefreshContol()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -20,6 +20,10 @@ class AttendanceViewController: UIViewController,UITableViewDataSource,UITableVi
         AttendancesController.sharedController.delegate = self
         // Do any additional setup after loading the view.
         self.tabBarController?.navigationItem.title  = "attendance".localized()
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(AttendanceViewController.handleRefresh(_:)),
+                                                   for: UIControlEvents.valueChanged)
+        self.tableView.addSubview(refreshController.refreshControl)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +33,11 @@ class AttendanceViewController: UIViewController,UITableViewDataSource,UITableVi
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        AttendancesController.sharedController.getAttendances()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -88,6 +97,7 @@ extension AttendanceViewController : AttendancesControllerDelegate {
     func onSuccess(response: Attendances) {
         print(response)
         self.tableView .reloadData()
+        refreshController.refreshControl.endRefreshing()
     }
     
 }

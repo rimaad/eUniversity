@@ -11,15 +11,22 @@ import UIKit
 class StatusDataViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-   
+    let refreshController = RefreshContol()
     override func viewDidLoad() {
         
         super.viewDidLoad()
         StudentDataController.sharedController.delegate = self
         StudentDataController.sharedController.getStudentData()
         AverageGradesController.sharedController.getAvarageGrades()
-        self.tabBarController?.navigationItem.title = "statusData".localized()
+        self.tableView.addSubview(refreshController.refreshControl)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = "statusData".localized()
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(StatusDataViewController.handleRefresh(_:)),
+                                                   for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +36,12 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
          return 90
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        NewsController.sharedController.getNews()
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,20 +105,13 @@ extension StatusDataViewController : StudentDataControllerDelegate {
 extension StatusDataViewController : AverageGradesControllerDelegate {
     func onSuccess(response: AverageGrades) {
         self.tableView.reloadData()
+        refreshController.refreshControl.endRefreshing()
     }
 
     func onError(error:NSError) {
+        let errorHandler = eUniversityError()
+        errorHandler.showErrorMessage(message: "something_went_wrong    ")
     }
     
 }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 

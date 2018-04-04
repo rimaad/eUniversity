@@ -17,10 +17,11 @@ class NewsTableViewCell: UITableViewCell {
     
     func populateCell(news:News) {
         newsTitleLabel.text = news.Title
-        newsTextLabel.text = news.Text
+        newsTextLabel.text = news.Text?.html2String
         newsDateLabel.text = news.Date
         newsImageView.image = setImage(imageID: news.AnnouncementIconID)
     }
+
     
     func setImage(imageID:Int) -> UIImage {
         
@@ -46,5 +47,23 @@ class NewsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+}
+
+
+extension String {
+    var html2AttributedString: NSAttributedString? {
+        do {
+            return try NSAttributedString(data: Data(utf8),
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: nil)
+        } catch {
+            print("error: ", error)
+            return nil
+        }
+    }
+    var html2String: String {
+        return html2AttributedString?.string ?? ""
     }
 }

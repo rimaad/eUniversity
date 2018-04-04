@@ -10,17 +10,24 @@ import UIKit
 
 class CertificatesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    let refreshController = RefreshContol()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavItems()
         navigationItem.title = "certificate".localized()
         CertificateController.sharedController.delegate = self
-        // Do any additional setup after loading the view.
+        self.tableView.addSubview(refreshController.refreshControl)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         CertificateController.sharedController.getCertificates(academicYear: false, academicYearId: "0")
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(CertificatesViewController.handleRefresh(_:)),for: UIControlEvents.valueChanged)
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        CertificateController.sharedController.getCertificates(academicYear: false, academicYearId:"")
     }
     
     
@@ -100,6 +107,7 @@ class CertificatesViewController: UIViewController,UITableViewDelegate,UITableVi
 extension CertificatesViewController:CertificatesControllerDelegate {
     func onSuccess(response: Certificates) {
         self.tableView.reloadData()
+        refreshController.refreshControl.endRefreshing()
     }
     
     func onError(error: NSError) {

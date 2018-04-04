@@ -11,17 +11,26 @@ import UIKit
 class PaymentsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var paymentsData : Payments?
     @IBOutlet weak var tableView: UITableView!
+    let refreshController = RefreshContol()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavItems()
         PaymentsController.sharedController.getPayment(academicYear: false, academicYearId:"")
         PaymentsController.sharedController.delegate = self
         // Do any additional setup after loading the view.
+        self.tableView.addSubview(refreshController.refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(PaymentsViewController.handleRefresh(_:)),
+                                                   for: UIControlEvents.valueChanged)
+        self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
     func setUpNavItems() {
@@ -33,6 +42,11 @@ class PaymentsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @objc func filterPressed() {
         createActionSheetView()
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        PaymentsController.sharedController.getPayment(academicYear: false, academicYearId: "0")
     }
     
     func createActionSheetView() {
@@ -70,6 +84,7 @@ extension PaymentsViewController : PaymentsControllerDelegate {
     func onSuccess(response: Payments) {
         self.tableView.reloadData()
         paymentsData = response
+        refreshController.refreshControl.endRefreshing()
     }
     
     func onError(error: NSError) {

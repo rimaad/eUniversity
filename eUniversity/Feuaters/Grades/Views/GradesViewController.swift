@@ -11,7 +11,7 @@ import UIKit
 
 
 class GradesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource {
- 
+    let refreshController = RefreshContol()
     @IBOutlet weak var tableView: UITableView!
     var pickerView:UIPickerView?
     var nextBar = UIView()
@@ -20,16 +20,23 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.awakeFromNib()
         
         self.title = "grades".localized()
+        self.tabBarController?.navigationItem.title = "grades".localized()
         self.tabBarItem.image = #imageLiteral(resourceName: "grades")
     }
     var gradesSuccess = ["passed".localized(),"unpassed".localized()]
+   
     override func viewDidLoad() {
         super.viewDidLoad()
        self.tabBarItem.title = "grades".localized()
         GradesController.sharedController.delegate = self
         GradesController.sharedController.getGrades()
-
+        self.tableView.addSubview(refreshController.refreshControl)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        GradesController.sharedController.getGrades()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +46,10 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavItems()
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(NewsViewController.handleRefresh(_:)),
+                                                   for: UIControlEvents.valueChanged)
+        self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationItem.title = "grades".localized()
     }
     
@@ -149,6 +160,7 @@ extension GradesViewController : GradesControllerDelegate {
     func onSuccess(response: StudentGrades) {
         print(response)
         self.tableView .reloadData()
+        refreshController.refreshControl.endRefreshing()
     }
     
     func onError() {

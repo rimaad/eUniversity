@@ -28,3 +28,4 @@ struct Attendance : Decodable {
     var SyllabusID : Int?
     var TeachingType:Int?
 }
+

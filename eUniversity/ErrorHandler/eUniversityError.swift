@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 class eUniversityError: Decodable {
     var exceptionCode :Int?
     var exceptionMessage:String?
     var value:String?
+
+    func showErrorMessage(message:String) {
+        let banner = NotificationBanner(title: "Greska", subtitle:message, style: .danger)
+        banner.show()
+    }
 }

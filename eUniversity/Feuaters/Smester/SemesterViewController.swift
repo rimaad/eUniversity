@@ -11,23 +11,34 @@ import UIKit
 class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
-    
+    let refreshController = RefreshContol()
     override func awakeFromNib() {
         super.awakeFromNib()
         self.title = "semester".localized()
         self.tabBarItem.image = #imageLiteral(resourceName: "semesters")
     }
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.navigationItem.title = "semester".localized()
         SemesterController.sharedController.getSemesters()
         SemesterController.sharedController.delegate = self
+        self.tableView.addSubview(refreshController.refreshControl)
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        refreshController.refreshControl.addTarget(self, action:
+            #selector(SemesterViewController.handleRefresh(_:)),
+                                                   for: UIControlEvents.valueChanged)
+        self.tabBarController?.navigationItem.title = "semester".localized()
+    }
     override func viewDidDisappear(_ animated: Bool) {
        
+    }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        SemesterController.sharedController.getSemesters()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,12 +83,7 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let storyBoard = UIStoryboard(name:"Semestar", bundle:nil)
         let semesterVC = storyBoard.instantiateViewController(withIdentifier: "semestarDetail")
         self.present(semesterVC, animated: true, completion: nil)
-        
-      /*  if let viewController = UIStoryboard(name: "Semestar", bundle: nil).instantiateViewController(withIdentifier: "semestarDetail") as?SemesterDetailViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(viewController, animated: true)
-            }
-        }*/
+
     }
 }
 
@@ -89,6 +95,7 @@ extension SemesterViewController : SemesterControllerDelegate {
     func onSuccess(response: Semesters) {
         print(response)
         self.tableView .reloadData()
+        refreshController.refreshControl.endRefreshing()
     }
 
 }
