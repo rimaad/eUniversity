@@ -824,4 +824,39 @@ class ApiClient {
             }
         }
     }
+    
+    func getReminders(onResponse:@escaping (_ success:Reminders?, _ error:NSError?)->Void) {
+        let   urlString = "https://api.euniversity.ba/api/students/reminders/get"
+        let url = URL(string:urlString)
+        
+        guard let accessToken = UserController.sharedController.accessToken else {
+            return
+        }
+        
+        let headers = [
+            "authToken":"\(accessToken)"
+        ]
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding:URLEncoding.queryString, headers:headers).responseJSON { (response) in
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    
+                    guard let responseData  = response.data  else {
+                        return }
+                    do {
+                        let reminderData = try JSONDecoder().decode(ReminderValue.self, from: responseData)
+                        onResponse(reminderData.value,nil)
+                    }
+                    catch let jsnError{
+                        print("jsonError",jsnError)
+                    }
+                default:
+                    print("error with response status: \(status)")
+                    onResponse(nil,nil)
+                }
+            }
+            
+        }
+    }
 }

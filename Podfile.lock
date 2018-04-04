@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.6.0)
+  - ENMBadgedBarButtonItem (4.0.1)
   - Firebase/Core (4.9.0):
     - FirebaseAnalytics (= 4.0.9)
     - FirebaseCore (= 4.0.15)
@@ -42,6 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.6)
+  - ENMBadgedBarButtonItem
   - Firebase/Core
   - Firebase/Messaging
   - Localize-Swift (~> 2.0)
@@ -50,6 +52,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  ENMBadgedBarButtonItem: 3982ad839dd22f37df4fb5d5531d01e667a4195e
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseCore: 3bd047463058fa6b5d312c97502c52e45401cdfb
@@ -64,6 +67,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 68ddaf5ca3221fede80d251d9ee607254f636a5c
+PODFILE CHECKSUM: b4d70cbacbf40ed2b05865e9f3d35b7546a2419f
 
 COCOAPODS: 1.4.0

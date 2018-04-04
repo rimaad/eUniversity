@@ -8,10 +8,20 @@
 
 import UIKit
 import NotificationBannerSwift
+import ENMBadgedBarButtonItem
 
 class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    let barButton = BadgedBarButtonItem(
+        startingBadgeValue: 0,
+        frame: CGRect(x: 0.0, y: 0.0, width:25, height: 25),
+        image: #imageLiteral(resourceName: "reminderBell"),
+        badgeProperties: BadgeProperties(originalFrame:CGRect(x: 0.0, y: 0.0, width:25, height: 25), minimumWidth:8, horizontalPadding: 0, verticalPadding:20, font: .systemFont(ofSize: 15), textColor: UIColor.white, backgroundColor: UIColor.red)
+    )
+   
+
     let refreshController = RefreshContol()
+ 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +31,7 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.tabBarItem.image = #imageLiteral(resourceName: "home")
         self.tabBarItem.title = "news".localized()
         self.tableView.addSubview(refreshController.refreshControl)
+        barButton.addTarget(self, action:#selector(NewsViewController.reminderTapped))
 
         // Do any additional setup after loading the view.
     }
@@ -31,6 +42,8 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                                                    for: UIControlEvents.valueChanged)
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationItem.title  = "news".localized()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setReminders(notfication:)), name: .reminder , object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,6 +73,10 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
     
         NewsController.sharedController.getNews()
+    }
+    
+    @objc func setReminders(notfication: NSNotification) {
+        barButton.badgeValue = ReminderController.sharedController.reminderData?.Reminders.count ?? 0
     }
 
     
@@ -95,9 +112,17 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func setUpNavItems() {
         // Additional bar button items
-        let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(NewsViewController.showSyllabusActionSheets))
+       
+       
+        barButton.badgeProperties.textColor = UIColor.white
+        barButton.badgeProperties.backgroundColor = UIColor.red
+        let button2 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(NewsViewController.showSyllabusActionSheets))
 
-        self.tabBarController?.navigationItem.setRightBarButtonItems([button1], animated: true)
+        self.tabBarController?.navigationItem.setRightBarButtonItems([button2,barButton], animated: true)
+    }
+    
+    @objc func reminderTapped() {
+        barButton.badgeValue = 4
     }
     
     @objc func showSyllabusActionSheets() {
@@ -135,3 +160,8 @@ extension NewsViewController : NewsControllerDelegate {
     func onError() {
     }
 }
+
+extension Notification.Name {
+    static let reminder = Notification.Name("reminder")
+}
+

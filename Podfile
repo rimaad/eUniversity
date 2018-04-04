@@ -11,6 +11,7 @@ target 'eUniversity' do
   pod 'Alamofire', '~> 4.6'
   pod 'SVProgressHUD'
   pod 'NotificationBannerSwift'
+  pod 'ENMBadgedBarButtonItem'
 
   target 'eUniversityTests' do
     inherit! :search_paths

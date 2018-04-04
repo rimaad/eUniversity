@@ -92,6 +92,8 @@
 		26EA05B2202D0A0D00CE1D24 /* Semestar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EA05B1202D0A0D00CE1D24 /* Semestar.swift */; };
 		26ED3A62201D2A8700836EEC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED3A61201D2A8700836EEC /* Image.swift */; };
 		26ED3A64201D2AA600836EEC /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED3A63201D2AA600836EEC /* ImagesController.swift */; };
+		26EDBCD92075867700561973 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDBCD82075867700561973 /* Reminder.swift */; };
+		26EDBCDC2075870200561973 /* ReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDBCDB2075870200561973 /* ReminderController.swift */; };
 		A6AB4F1CAA7E86277184ED31 /* Pods_eUniversity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10893E723E906EA3C4C344F5 /* Pods_eUniversity.framework */; };
 		D69B0084504D16B3B975D80D /* Pods_eUniversityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD213BD40C9246C975F34F8A /* Pods_eUniversityUITests.framework */; };
 		EED5693B86E63C48527E274B /* Pods_eUniversityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2970C9178D25CB58C3B8441D /* Pods_eUniversityTests.framework */; };
@@ -212,6 +214,8 @@
 		26EA05B1202D0A0D00CE1D24 /* Semestar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semestar.swift; sourceTree = "<group>"; };
 		26ED3A61201D2A8700836EEC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		26ED3A63201D2AA600836EEC /* ImagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesController.swift; sourceTree = "<group>"; };
+		26EDBCD82075867700561973 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		26EDBCDB2075870200561973 /* ReminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderController.swift; sourceTree = "<group>"; };
 		2970C9178D25CB58C3B8441D /* Pods_eUniversityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eUniversityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADD89B371D009F6E83D9884 /* Pods-eUniversityUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversityUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversityUITests/Pods-eUniversityUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30246A090C2A79544AF43C6F /* Pods-eUniversityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eUniversityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eUniversityTests/Pods-eUniversityTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 				26318C94205B14C40026448C /* AcademicYearsController.swift */,
 				262C1024205EA35700166554 /* PostCertificateController.swift */,
 				269D22EA206054670027B725 /* SylabussesController.swift */,
+				26EDBCDB2075870200561973 /* ReminderController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				260325D420588106002A9481 /* Payments.swift */,
 				26318C96205B153B0026448C /* AcademicYears.swift */,
 				269D22EC206055D30027B725 /* Syllabus.swift */,
+				26EDBCD82075867700561973 /* Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-eUniversity/Pods-eUniversity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ENMBadgedBarButtonItem/ENMBadgedBarButtonItem.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
@@ -826,6 +833,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ENMBadgedBarButtonItem.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
@@ -941,6 +949,7 @@
 				268164A6206FC8B0001E8C77 /* RefreshContol.swift in Sources */,
 				26D53EB4204DE3C100B920E9 /* SemesterDetailTableViewCell.swift in Sources */,
 				2628BB07203B6E3E00B2106E /* AttendancesController.swift in Sources */,
+				26EDBCDC2075870200561973 /* ReminderController.swift in Sources */,
 				26D73F8D20211BA600C54F94 /* AverageGradesController.swift in Sources */,
 				262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */,
 				260325B1204F40AB002A9481 /* MenuTableViewCell.swift in Sources */,
@@ -980,6 +989,7 @@
 				2624F4A7200D40F300CE1DCF /* User.swift in Sources */,
 				260325C22055D5A0002A9481 /* CertificateTableViewCell.swift in Sources */,
 				26318C95205B14C40026448C /* AcademicYearsController.swift in Sources */,
+				26EDBCD92075867700561973 /* Reminder.swift in Sources */,
 				2628AE6A1FEEA58000A6C37A /* Language.swift in Sources */,
 				260325C9205731B3002A9481 /* AttendanceDetailController.swift in Sources */,
 				26689EA61FD88D750081FA12 /* AppDelegate.swift in Sources */,
