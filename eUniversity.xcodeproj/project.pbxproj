@@ -52,6 +52,14 @@
 		26318C932059DB810026448C /* PaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C922059DB810026448C /* PaymentsTableViewCell.swift */; };
 		26318C95205B14C40026448C /* AcademicYearsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C94205B14C40026448C /* AcademicYearsController.swift */; };
 		26318C97205B153B0026448C /* AcademicYears.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26318C96205B153B0026448C /* AcademicYears.swift */; };
+		263192E220788D6700FDADD1 /* Reminders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263192E120788D6700FDADD1 /* Reminders.storyboard */; };
+		263192E6207894BE00FDADD1 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263192E5207894BE00FDADD1 /* ReminderTableViewCell.swift */; };
+		263192E8207895D200FDADD1 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263192E7207895D200FDADD1 /* ReminderViewController.swift */; };
+		263192EB2078B48700FDADD1 /* Exams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263192EA2078B48700FDADD1 /* Exams.storyboard */; };
+		263192ED2078B83600FDADD1 /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263192EC2078B83600FDADD1 /* ExamsViewController.swift */; };
+		263192EF2078B84800FDADD1 /* ExamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263192EE2078B84800FDADD1 /* ExamsTableViewCell.swift */; };
+		263192F12079272300FDADD1 /* ExamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263192F02079272300FDADD1 /* ExamsController.swift */; };
+		263192F3207AB1CF00FDADD1 /* Exams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263192F2207AB1CF00FDADD1 /* Exams.swift */; };
 		2632B1A9202A637800AC7148 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1A8202A637800AC7148 /* DoubleExtension.swift */; };
 		2632B1AC202BA4F400AC7148 /* eUniversityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632B1AB202BA4F400AC7148 /* eUniversityError.swift */; };
 		2640776F2012363A000D6073 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640776E2012363A000D6073 /* News.swift */; };
@@ -164,6 +172,14 @@
 		26318C922059DB810026448C /* PaymentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewCell.swift; sourceTree = "<group>"; };
 		26318C94205B14C40026448C /* AcademicYearsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicYearsController.swift; sourceTree = "<group>"; };
 		26318C96205B153B0026448C /* AcademicYears.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicYears.swift; sourceTree = "<group>"; };
+		263192E120788D6700FDADD1 /* Reminders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminders.storyboard; sourceTree = "<group>"; };
+		263192E5207894BE00FDADD1 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		263192E7207895D200FDADD1 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		263192EA2078B48700FDADD1 /* Exams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exams.storyboard; sourceTree = "<group>"; };
+		263192EC2078B83600FDADD1 /* ExamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
+		263192EE2078B84800FDADD1 /* ExamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsTableViewCell.swift; sourceTree = "<group>"; };
+		263192F02079272300FDADD1 /* ExamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsController.swift; sourceTree = "<group>"; };
+		263192F2207AB1CF00FDADD1 /* Exams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exams.swift; sourceTree = "<group>"; };
 		2632B1A8202A637800AC7148 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2632B1AB202BA4F400AC7148 /* eUniversityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eUniversityError.swift; sourceTree = "<group>"; };
 		2640776E2012363A000D6073 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -296,6 +312,7 @@
 				262C1024205EA35700166554 /* PostCertificateController.swift */,
 				269D22EA206054670027B725 /* SylabussesController.swift */,
 				26EDBCDB2075870200561973 /* ReminderController.swift */,
+				263192F02079272300FDADD1 /* ExamsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +365,7 @@
 				26318C96205B153B0026448C /* AcademicYears.swift */,
 				269D22EC206055D30027B725 /* Syllabus.swift */,
 				26EDBCD82075867700561973 /* Reminder.swift */,
+				263192F2207AB1CF00FDADD1 /* Exams.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -413,6 +431,26 @@
 				26318C922059DB810026448C /* PaymentsTableViewCell.swift */,
 			);
 			path = Payments;
+			sourceTree = "<group>";
+		};
+		263192E020788D3E00FDADD1 /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				263192E120788D6700FDADD1 /* Reminders.storyboard */,
+				263192E5207894BE00FDADD1 /* ReminderTableViewCell.swift */,
+				263192E7207895D200FDADD1 /* ReminderViewController.swift */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		263192E92078B46D00FDADD1 /* ExamPeriods */ = {
+			isa = PBXGroup;
+			children = (
+				263192EA2078B48700FDADD1 /* Exams.storyboard */,
+				263192EC2078B83600FDADD1 /* ExamsViewController.swift */,
+				263192EE2078B84800FDADD1 /* ExamsTableViewCell.swift */,
+			);
+			path = ExamPeriods;
 			sourceTree = "<group>";
 		};
 		2632B1AA202BA4CB00AC7148 /* ErrorHandler */ = {
@@ -543,6 +581,8 @@
 		26E41DC01FE707A000FD4A7C /* Feuaters */ = {
 			isa = PBXGroup;
 			children = (
+				263192E92078B46D00FDADD1 /* ExamPeriods */,
+				263192E020788D3E00FDADD1 /* Reminders */,
 				26318C8D2059D59C0026448C /* Payments */,
 				260325BE2055D568002A9481 /* Certificates */,
 				260325AD204F4042002A9481 /* Menu */,
@@ -733,6 +773,8 @@
 				265E33CE2007C6B70033B393 /* Login.storyboard in Resources */,
 				269D22EF206069520027B725 /* News.storyboard in Resources */,
 				26689EAF1FD88D750081FA12 /* Assets.xcassets in Resources */,
+				263192EB2078B48700FDADD1 /* Exams.storyboard in Resources */,
+				263192E220788D6700FDADD1 /* Reminders.storyboard in Resources */,
 				260325AC204F3EA6002A9481 /* profile_pic_default.png in Resources */,
 				26E41DD01FE865E300FD4A7C /* Localizable.strings in Resources */,
 				260325BD2055CD7E002A9481 /* ic_donut_large_36pt_3x.png in Resources */,
@@ -938,6 +980,7 @@
 			files = (
 				260325C02055D589002A9481 /* CertificatesViewController.swift in Sources */,
 				2628BB03203B6DE500B2106E /* Attendance.swift in Sources */,
+				263192E8207895D200FDADD1 /* ReminderViewController.swift in Sources */,
 				269598F3201D406D006641EB /* Grades.swift in Sources */,
 				2624F4B3200FEF4A00CE1DCF /* NewsController.swift in Sources */,
 				265E33D12007C7740033B393 /* LoginViewController.swift in Sources */,
@@ -945,6 +988,7 @@
 				26318C912059DB6A0026448C /* PaymentsViewController.swift in Sources */,
 				262C1025205EA35700166554 /* PostCertificateController.swift in Sources */,
 				262C1021205E6CDF00166554 /* CreateCertificateViewController.swift in Sources */,
+				263192E6207894BE00FDADD1 /* ReminderTableViewCell.swift in Sources */,
 				262A29C42014BF78004C0F7F /* StudentDataController.swift in Sources */,
 				268164A6206FC8B0001E8C77 /* RefreshContol.swift in Sources */,
 				26D53EB4204DE3C100B920E9 /* SemesterDetailTableViewCell.swift in Sources */,
@@ -954,6 +998,7 @@
 				262A29C72014C63F004C0F7F /* StatusDataTableViewCell.swift in Sources */,
 				260325B1204F40AB002A9481 /* MenuTableViewCell.swift in Sources */,
 				260325CD20573312002A9481 /* AttendancesDetailViewController.swift in Sources */,
+				263192EF2078B84800FDADD1 /* ExamsTableViewCell.swift in Sources */,
 				260325D120586F20002A9481 /* ExamPeriods.swift in Sources */,
 				26689EAA1FD88D750081FA12 /* SecondViewController.swift in Sources */,
 				2624F4B1200FEB9800CE1DCF /* NewsTableViewCell.swift in Sources */,
@@ -966,6 +1011,7 @@
 				2640776F2012363A000D6073 /* News.swift in Sources */,
 				26EA05AE202D068400CE1D24 /* SemesterTableViewCell.swift in Sources */,
 				260325B52051F4A5002A9481 /* CertificateController.swift in Sources */,
+				263192ED2078B83600FDADD1 /* ExamsViewController.swift in Sources */,
 				260325D320587FF3002A9481 /* PaymentsController.swift in Sources */,
 				262A29C02013E8B8004C0F7F /* StatusDataViewController.swift in Sources */,
 				2628BB0D203B731300B2106E /* AttendanceTableViewCell.swift in Sources */,
@@ -985,8 +1031,10 @@
 				265E33D42007D5720033B393 /* ApiClient.swift in Sources */,
 				2628AE671FE9AE5200A6C37A /* StringExtension.swift in Sources */,
 				262E6239204C696800ECBC29 /* AnnouncmentViewController.swift in Sources */,
+				263192F12079272300FDADD1 /* ExamsController.swift in Sources */,
 				260325CF205854E6002A9481 /* ExamsPeriodController.swift in Sources */,
 				2624F4A7200D40F300CE1DCF /* User.swift in Sources */,
+				263192F3207AB1CF00FDADD1 /* Exams.swift in Sources */,
 				260325C22055D5A0002A9481 /* CertificateTableViewCell.swift in Sources */,
 				26318C95205B14C40026448C /* AcademicYearsController.swift in Sources */,
 				26EDBCD92075867700561973 /* Reminder.swift in Sources */,
