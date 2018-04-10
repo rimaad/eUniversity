@@ -75,7 +75,8 @@ class SemesterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openSemesterDetail()
+        //disable SemesterDetail
+        // openSemesterDetail()
     }
     
     func openSemesterDetail() {

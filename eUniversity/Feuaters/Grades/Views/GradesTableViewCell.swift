@@ -11,6 +11,7 @@ import UIKit
 class GradesTableViewCell: UITableViewCell {
   
     
+    @IBOutlet weak var gradesStatusView: UIView!
     @IBOutlet weak var gradeImageView: UIImageView!
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel! {
@@ -50,13 +51,16 @@ class GradesTableViewCell: UITableViewCell {
             semestarValueLabel.text = "\(grade.Semester!)." + " semestar"
             etcsValueLabel.text = "\(grade.ECTS!)." + " ECTS"
             gradeImageView.image = #imageLiteral(resourceName: "circle_lime")
+            gradesStatusView.backgroundColor = UIColor.init(red: 33.0/255, green: 184.0/255, blue: 52.0/255, alpha: 1.0)
+
         }
         else {
-            gradeImageView.image = #imageLiteral(resourceName: "circle_red")
+            gradeImageView.image = nil
             gradeValueLabel.text = "-"
             courseNameValueLabel.text = grade.CourseName
             semestarValueLabel.text = "\(grade.Semester!)." + " semestar"
             etcsValueLabel.text = "\(grade.ECTS!)." + " ECTS"
+            gradesStatusView.backgroundColor = UIColor.red
 
         }
     }

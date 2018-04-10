@@ -17,5 +17,6 @@ struct  ExamPeriods : Decodable {
 }
 
 struct Exam: Decodable {
-    
+    var ExamPeriodID:Int?
+    var Name:String?
 }

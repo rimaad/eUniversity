@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,61 +30,58 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="odobren_icon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZL-V4-iG0">
-                                                    <rect key="frame" x="5" y="27" width="35" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="2gN-9G-1DH"/>
-                                                        <constraint firstAttribute="height" constant="35" id="CDe-Px-N6c"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPc-CQ-XTm">
-                                                    <rect key="frame" x="72" y="10" width="293" height="17"/>
+                                                    <rect key="frame" x="15" y="11" width="36" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.63752996920000005" blue="0.91163367029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeR-T0-MT3">
-                                                    <rect key="frame" x="72" y="32" width="293" height="14"/>
+                                                    <rect key="frame" x="15" y="36" width="29" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5O-Ff-eF1">
-                                                    <rect key="frame" x="72" y="51" width="293" height="14"/>
+                                                    <rect key="frame" x="15" y="58" width="29" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuI-be-IAu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="4" height="94"/>
+                                                    <color key="backgroundColor" red="0.13046695150000001" green="0.72336632010000002" blue="0.20466593860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="4" id="BvE-AT-heD"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gd7-iW-LaW">
-                                                    <rect key="frame" x="72" y="68" width="293" height="14"/>
+                                                    <rect key="frame" x="15" y="80" width="29" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="YZL-V4-iG0" secondAttribute="bottom" constant="32.5" id="08d-FL-wsk"/>
-                                                <constraint firstItem="YZL-V4-iG0" firstAttribute="top" secondItem="A8t-F0-hh2" secondAttribute="top" constant="27" id="FNZ-RV-8H5"/>
-                                                <constraint firstAttribute="trailing" secondItem="t5O-Ff-eF1" secondAttribute="trailing" constant="10" id="KBe-GP-Qko"/>
-                                                <constraint firstAttribute="trailing" secondItem="Gd7-iW-LaW" secondAttribute="trailing" constant="10" id="O2I-LN-LEI"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZPc-CQ-XTm" secondAttribute="trailing" constant="10" id="Pez-9f-UM0"/>
-                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="top" secondItem="ZPc-CQ-XTm" secondAttribute="bottom" constant="5" id="UGH-L9-Dj1"/>
-                                                <constraint firstItem="t5O-Ff-eF1" firstAttribute="top" secondItem="DeR-T0-MT3" secondAttribute="bottom" constant="5" id="Wk4-oR-R1a"/>
-                                                <constraint firstAttribute="trailing" secondItem="DeR-T0-MT3" secondAttribute="trailing" constant="10" id="cxR-4f-9A9"/>
-                                                <constraint firstItem="ZPc-CQ-XTm" firstAttribute="leading" secondItem="YZL-V4-iG0" secondAttribute="trailing" constant="32" id="opG-fw-ac2"/>
-                                                <constraint firstItem="ZPc-CQ-XTm" firstAttribute="top" secondItem="A8t-F0-hh2" secondAttribute="top" constant="10" id="r9q-g5-7Re"/>
-                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="leading" secondItem="YZL-V4-iG0" secondAttribute="trailing" constant="32" id="ryk-kM-xdb"/>
-                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="top" secondItem="ZPc-CQ-XTm" secondAttribute="bottom" constant="5" id="t4K-Ae-7Pz"/>
-                                                <constraint firstItem="Gd7-iW-LaW" firstAttribute="leading" secondItem="YZL-V4-iG0" secondAttribute="trailing" constant="32" id="ud5-Oh-yd8"/>
-                                                <constraint firstItem="t5O-Ff-eF1" firstAttribute="leading" secondItem="YZL-V4-iG0" secondAttribute="trailing" constant="32" id="v6Y-zL-Xn4"/>
-                                                <constraint firstItem="Gd7-iW-LaW" firstAttribute="top" secondItem="t5O-Ff-eF1" secondAttribute="bottom" constant="3" id="wBD-88-GhW"/>
-                                                <constraint firstItem="YZL-V4-iG0" firstAttribute="leading" secondItem="A8t-F0-hh2" secondAttribute="leading" constant="5" id="zNl-XH-fqT"/>
+                                                <constraint firstItem="YuI-be-IAu" firstAttribute="top" secondItem="A8t-F0-hh2" secondAttribute="top" id="0Nf-Eh-A8F"/>
+                                                <constraint firstItem="t5O-Ff-eF1" firstAttribute="leading" secondItem="Gd7-iW-LaW" secondAttribute="leading" id="21O-Eo-rnc"/>
+                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="top" secondItem="ZPc-CQ-XTm" secondAttribute="bottom" constant="8" symbolic="YES" id="58R-p0-eP2"/>
+                                                <constraint firstItem="t5O-Ff-eF1" firstAttribute="top" secondItem="DeR-T0-MT3" secondAttribute="bottom" constant="8" symbolic="YES" id="BwP-MF-cRC"/>
+                                                <constraint firstItem="Gd7-iW-LaW" firstAttribute="top" secondItem="t5O-Ff-eF1" secondAttribute="bottom" constant="8" symbolic="YES" id="Cz8-sz-ADh"/>
+                                                <constraint firstAttribute="bottom" secondItem="YuI-be-IAu" secondAttribute="bottom" id="GH3-Px-kEB"/>
+                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="leading" secondItem="A8t-F0-hh2" secondAttribute="leading" constant="15" id="SOY-Bo-m6V"/>
+                                                <constraint firstItem="ZPc-CQ-XTm" firstAttribute="top" secondItem="A8t-F0-hh2" secondAttribute="topMargin" id="Uvg-84-RhA"/>
+                                                <constraint firstItem="YuI-be-IAu" firstAttribute="leading" secondItem="A8t-F0-hh2" secondAttribute="leading" id="gQv-7m-Bey"/>
+                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="leading" secondItem="YuI-be-IAu" secondAttribute="trailing" constant="11" id="kA0-bD-Wb1"/>
+                                                <constraint firstItem="DeR-T0-MT3" firstAttribute="leading" secondItem="t5O-Ff-eF1" secondAttribute="leading" id="l3L-mU-msz"/>
+                                                <constraint firstItem="ZPc-CQ-XTm" firstAttribute="leading" secondItem="YuI-be-IAu" secondAttribute="trailing" constant="11" id="lOR-k5-ogV"/>
+                                                <constraint firstItem="YuI-be-IAu" firstAttribute="bottom" secondItem="Gd7-iW-LaW" secondAttribute="bottom" id="unR-x7-D3Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="certImageView" destination="YZL-V4-iG0" id="MuS-jb-DGz"/>
                                             <outlet property="createdDate" destination="t5O-Ff-eF1" id="YDo-YH-GXc"/>
                                             <outlet property="issuedDate" destination="Gd7-iW-LaW" id="v5i-gT-xdv"/>
+                                            <outlet property="statusView" destination="YuI-be-IAu" id="Abf-XY-DCz"/>
                                             <outlet property="subTitleLabel" destination="DeR-T0-MT3" id="5M7-fY-Qpb"/>
                                             <outlet property="titleLabel" destination="ZPc-CQ-XTm" id="VEs-bi-afE"/>
                                         </connections>
@@ -217,7 +215,4 @@
             <point key="canvasLocation" x="560.79999999999995" y="-436.73163418290858"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="odobren_icon" width="35" height="35"/>
-    </resources>
 </document>

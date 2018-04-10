@@ -48,6 +48,7 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewWillDisappear(_ animated: Bool) {
         hideNavItems()
+        AverageGradesController.sharedController.getAvarageGrades()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +57,8 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func showBanners(message:String) {
-        let banner = NotificationBanner(title: "Greska", subtitle:message, style: .danger)
+        let banner = NotificationBanner(title: "Odabrani predmet", subtitle:message, style: .info)
+        banner.duration = 0.4
         banner.show()
        
     }
@@ -110,10 +112,20 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         navigationController?.pushViewController(vc,animated: true)
     }
     
+    func openRemindersScreen() {
+        let storyboard = UIStoryboard(name: "Reminders", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "reminderView") as! ReminderViewController
+
+        navigationController?.pushViewController(vc,animated: true)
+    }
+    
     func setUpNavItems() {
         // Additional bar button items
        
-       
+        navigationController?.navigationBar.barTintColor = UIColor.init(red: 70.0/255.0, green: 194.0/255.0, blue: 202.0/255.0, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = UIColor.white
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         barButton.badgeProperties.textColor = UIColor.white
         barButton.badgeProperties.backgroundColor = UIColor.red
         let button2 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(NewsViewController.showSyllabusActionSheets))
@@ -122,7 +134,7 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     @objc func reminderTapped() {
-        barButton.badgeValue = 4
+        openRemindersScreen()
     }
     
     @objc func showSyllabusActionSheets() {
@@ -139,7 +151,8 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         for syllabus in (SylabussesController.sharedController.syllabussesData?.Syllabuses)! {
             
             myActionSheet.addAction(UIAlertAction(title:syllabus.CourseName, style: UIAlertActionStyle.default, handler: { (ACTION :UIAlertAction!)in
-                NewsController.sharedController.getNewsBySyllabus(SyllabusID:syllabus.SyllabusID ?? 0)
+                self.showBanners(message:syllabus.CourseName ?? "")
+            NewsController.sharedController.getNewsBySyllabus(SyllabusID:syllabus.SyllabusID ?? 0)
             }))
         }
         self.present(myActionSheet, animated: true, completion: nil)

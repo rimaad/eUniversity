@@ -23,11 +23,12 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavItems()
-         self.tabBarController?.navigationItem.title = "menu".localized()
+        self.tabBarController?.navigationItem.title = "menu".localized()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         hideNavItems()
+
     }
     
     func setUpNavItems() {
@@ -79,7 +80,7 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
         case 1:
             openPayments()
         case 2:
-            print("exams")
+            openExamPeriods()
         case 3:
             openCertificates()
         case 4:
@@ -106,9 +107,14 @@ class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func openPayments() {
 
-        
         let storyboard = UIStoryboard(name: "Payments", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "paymentView") as! PaymentsViewController
+        navigationController?.pushViewController(vc,animated: true)
+    }
+    
+    func openExamPeriods() {
+        let storyboard = UIStoryboard(name: "Exams", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "examsView") as! ExamsViewController
         navigationController?.pushViewController(vc,animated: true)
     }
     

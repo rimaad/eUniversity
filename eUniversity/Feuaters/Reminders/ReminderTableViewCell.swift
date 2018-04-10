@@ -9,7 +9,8 @@
 import UIKit
 
 class ReminderTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var reminderTextLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

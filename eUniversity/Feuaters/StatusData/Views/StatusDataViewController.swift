@@ -17,7 +17,6 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
         super.viewDidLoad()
         StudentDataController.sharedController.delegate = self
         StudentDataController.sharedController.getStudentData()
-        AverageGradesController.sharedController.getAvarageGrades()
         self.tableView.addSubview(refreshController.refreshControl)
         // Do any additional setup after loading the view.
     }
@@ -40,8 +39,7 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         
-        NewsController.sharedController.getNews()
-        
+        StudentDataController.sharedController.getStudentData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,23 +63,12 @@ class StatusDataViewController: UIViewController,UITableViewDataSource,UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        switch (section) {
-        case 0:
-            return 9
-        case 1:
-            if let num  = StudentDataController.sharedController.studentData?.StudyYear {
-                return  num 
-            } else {
-                return 0
-            }
-        default:
-            return 0
-        }
+       return 8
         
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     override func awakeFromNib() {
@@ -110,7 +97,7 @@ extension StatusDataViewController : AverageGradesControllerDelegate {
 
     func onError(error:NSError) {
         let errorHandler = eUniversityError()
-        errorHandler.showErrorMessage(message: "something_went_wrong    ")
+        errorHandler.showErrorMessage(message: "something_went_wrong")
     }
     
 }

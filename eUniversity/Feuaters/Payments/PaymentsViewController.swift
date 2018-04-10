@@ -33,10 +33,11 @@ class PaymentsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
+    
     func setUpNavItems() {
         // Additional bar button items
         let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(PaymentsViewController.filterPressed))
-        navigationItem.title = "Payments"
+        navigationItem.title = "payments".localized()
         navigationItem.setRightBarButtonItems([button1], animated: true)
     }
     
@@ -85,6 +86,7 @@ extension PaymentsViewController : PaymentsControllerDelegate {
         self.tableView.reloadData()
         paymentsData = response
         refreshController.refreshControl.endRefreshing()
+        
     }
     
     func onError(error: NSError) {

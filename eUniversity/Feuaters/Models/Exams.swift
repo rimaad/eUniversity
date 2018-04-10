@@ -8,6 +8,21 @@
 
 import UIKit
 
-class Exams: NSObject {
+struct ExamsValue: Decodable {
+    var value : ExamTerms
+}
 
+struct ExamTerms : Decodable {
+    var ExamTerms : [ExamTerm]
+}
+
+struct ExamTerm : Decodable {
+    var ExamTermID:Int?
+    var CourseName:String?
+    var DateTime:String?
+    var ExamRegistrationStatus:String?
+    var Registered :Bool?
+    var  Selected :Bool?
+    var ExamRegistrationID : Int?
+    var CanRegister:Bool?
 }

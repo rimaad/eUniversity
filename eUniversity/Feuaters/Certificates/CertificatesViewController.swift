@@ -59,8 +59,8 @@ class CertificatesViewController: UIViewController,UITableViewDelegate,UITableVi
     }
     
     func createActionSheetView() {
-        let myActionSheet =  UIAlertController(title: "Choose academic year", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        let myActionSheet =  UIAlertController(title: "Choose academic year".localized(), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        myActionSheet.addAction(UIAlertAction(title: "Cancel".localized(), style: UIAlertActionStyle.cancel, handler: nil))
         
         for academicYear in (AcademicYearsController.sharedController.academicYearsData?.AcademicYears)! {
             
@@ -72,7 +72,7 @@ class CertificatesViewController: UIViewController,UITableViewDelegate,UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 90
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

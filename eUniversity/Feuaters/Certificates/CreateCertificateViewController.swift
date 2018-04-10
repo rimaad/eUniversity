@@ -88,7 +88,7 @@ class CreateCertificateViewController: UIViewController,UIPickerViewDataSource,U
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
-      SVProgressHUD.show()
+        SVProgressHUD.show()
         PostCertificateController.sharedController.postCertificate(purposeID: purposeID ?? 0, typeID:typeID ?? 0,note:noteText.text)
     }
 }

@@ -29,6 +29,7 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.viewDidLoad()
        self.tabBarItem.title = "grades".localized()
         GradesController.sharedController.delegate = self
+        StudentDataController.sharedController.getStudentData()
         GradesController.sharedController.getGrades()
         self.tableView.addSubview(refreshController.refreshControl)
         // Do any additional setup after loading the view.
@@ -52,11 +53,12 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.tabBarController?.navigationItem.hidesBackButton = true
         self.tabBarController?.navigationItem.title = "grades".localized()
     }
-    
+        
     override func viewDidDisappear(_ animated: Bool) {
         hideNavItems()
     }
     
+
     func setUpNavItems() {
         // Additional bar button items
         let button1 = UIBarButtonItem(image:#imageLiteral(resourceName: "search"), style: .plain, target: self, action: #selector(GradesViewController.filterPressed))
@@ -70,15 +72,24 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let countNum =  GradesController.sharedController.gradesData?.StudentGrades.count {
-            if countNum > 0 {
-                
-                // cell?.populateCell(news: (NewsController.sharedController.announcments?.Announcements[indexPath.row])!)
-                return  countNum
-            } else {
+            switch (section) {
+            case 1:
+                return countNum
+            case 0:
+                if let num  = AverageGradesController.sharedController.averageGradesData?.AverageGrades.count {
+                    return  num + 1
+                } else {
+                    return 0
+                }
+            default:
                 return 0
             }
         }
         return 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 140
@@ -141,6 +152,16 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0 {
+            let cellReuseIdentifier = "studentData"
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? StudentDataTableViewCell
+            if (StudentDataController.sharedController.studentData != nil) {
+                cell?.populateCell(row:indexPath.row)
+                
+            }
+            return cell!
+        } else {
         let cellReuseIdentifier = "gradesCell"
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? GradesTableViewCell
         if let countNum =  GradesController.sharedController.gradesData?.StudentGrades.count {
@@ -152,6 +173,7 @@ class GradesViewController: UIViewController,UITableViewDelegate,UITableViewData
             }
             return cell!
         }
+      }
     }
 
     

@@ -11,6 +11,7 @@ import UIKit
 class CertificateTableViewCell: UITableViewCell {
     @IBOutlet weak var certImageView: UIImageView!
     
+    @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var issuedDate: UILabel!
     @IBOutlet weak var createdDate: UILabel!
@@ -32,18 +33,19 @@ class CertificateTableViewCell: UITableViewCell {
         createdDate.text = createdDateValue
         issuedDate.text = CertificateController.sharedController.certificateData?.Certificates[indexPath].IssuedDate ?? ""
         subTitleLabel.text = CertificateController.sharedController.certificateData?.Certificates[indexPath].CertificatePurpose
-        certImageView.image = setImage(issued:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Issued)!,active:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Active!)!)
+        statusView.backgroundColor = setColor(issued:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Issued)!,active:(CertificateController.sharedController.certificateData?.Certificates[indexPath].Active!)!)
+        
     }
     
-    func setImage(issued:Int,active:Int) -> UIImage {
+    func setColor(issued:Int,active:Int) -> UIColor {
         
         if active == 1 && issued == 0 {
-             return #imageLiteral(resourceName: "pending_certificate")
+             return UIColor.yellow
         } else if active == 0 && issued == 1  {
-              return #imageLiteral(resourceName: "odobren_icon")
+              return UIColor.init(red: 33.0/255, green: 184.0/255, blue: 52.0/255, alpha: 1.0)
         }
         else {
-           return #imageLiteral(resourceName: "neodobren_icon")
+           return UIColor.red
         }
     }
 

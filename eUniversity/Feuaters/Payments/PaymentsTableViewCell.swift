@@ -27,7 +27,7 @@ class PaymentsTableViewCell: UITableViewCell {
     }
     
     func populateCell(payment:Payment) {
-        amountLabel.text = "\(payment.Amount ?? 0)"
+        amountLabel.text = "\(payment.Amount ?? 0)" + " KM"
         academicYear.text = payment.AcademicYear
         yearOfStudy.text = "\(payment.StudyYear ?? 0)" + "year".localized()
         paymentTitle.text = payment.PaymentType

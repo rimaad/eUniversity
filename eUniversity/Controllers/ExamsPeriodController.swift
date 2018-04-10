@@ -9,20 +9,20 @@
 import UIKit
 
 protocol  ExamsPeriodControllerDelegate: class {
-    func onSuccess(response: Certificates)
+    func onSuccess(response: ExamPeriods)
     func onError(error:NSError)
 }
 
 class ExamsPeriodController: NSObject {
     weak var delegate : ExamsPeriodControllerDelegate?
     static let sharedController = ExamsPeriodController()
-    var certificateData  :  Certificates?
+    var examsData  :  ExamPeriods?
     let apiClient = ApiClient()
     
     func getExamPeriods() {
         apiClient.getExamPeriods() {(response, error) in
             if response != nil {
-                self.certificateData = response
+                self.examsData = response
                 self.delegate?.onSuccess(response: response!)
             }
         }

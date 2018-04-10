@@ -9,7 +9,11 @@
 import UIKit
 
 class NewsDetailViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.isUserInteractionEnabled = true
+        }
+    }
     @IBOutlet weak var titleLabelText: UILabel!
     var news :News?
     @IBOutlet weak var titleDocument: UILabel!

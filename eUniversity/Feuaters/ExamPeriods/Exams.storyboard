@@ -39,8 +39,8 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-9P-D3d">
-                                                    <rect key="frame" x="15" y="11" width="224" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -55,7 +55,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmZ-J5-kiU">
                                                     <rect key="frame" x="15" y="69" width="224" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -65,7 +65,10 @@
                                                         <segment title="Prijavi"/>
                                                         <segment title="Odjavi"/>
                                                     </segments>
-                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" red="0.27293050289999998" green="0.76095062489999998" blue="0.7941016555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="segmentedControllChanged:" destination="65f-cm-Mv0" eventType="valueChanged" id="MzG-Ov-kOB"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -80,12 +83,13 @@
                                                 <constraint firstItem="8ei-9P-D3d" firstAttribute="leading" secondItem="VQo-UD-1xg" secondAttribute="leading" constant="15" id="b6x-cb-Hio"/>
                                                 <constraint firstItem="Xhq-E0-5w2" firstAttribute="leading" secondItem="VQo-UD-1xg" secondAttribute="leading" id="bVS-22-IdN"/>
                                                 <constraint firstItem="q31-VH-MYO" firstAttribute="top" secondItem="8ei-9P-D3d" secondAttribute="bottom" constant="8" symbolic="YES" id="geV-x1-eT2"/>
-                                                <constraint firstItem="q31-VH-MYO" firstAttribute="trailing" secondItem="8ei-9P-D3d" secondAttribute="trailing" id="tOi-Ip-5Bb"/>
+                                                <constraint firstItem="q31-VH-MYO" firstAttribute="trailing" secondItem="8ei-9P-D3d" secondAttribute="trailing" constant="-121" id="tOi-Ip-5Bb"/>
                                                 <constraint firstItem="q31-VH-MYO" firstAttribute="trailing" secondItem="zmZ-J5-kiU" secondAttribute="trailing" id="unt-Hv-yEg"/>
                                                 <constraint firstItem="zmZ-J5-kiU" firstAttribute="top" secondItem="q31-VH-MYO" secondAttribute="bottom" constant="8" symbolic="YES" id="zAe-5Q-HLB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="q31-VH-MYO" id="hM5-iC-Wza"/>
                                             <outlet property="dateOfExam" destination="Zaa-Ug-oJx" id="Mnt-Hl-FMm"/>
                                             <outlet property="segmentedControlExam" destination="Iw7-9F-Su6" id="WrM-GA-wkr"/>
                                             <outlet property="statusColorView" destination="Xhq-E0-5w2" id="ovX-so-x7d"/>
